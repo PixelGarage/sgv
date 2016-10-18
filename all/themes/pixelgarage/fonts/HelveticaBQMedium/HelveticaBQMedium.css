@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'HelveticaBQMedium';
+    src: url('fonts/HelveticaBQMedium.eot');
+    src: url('fonts/HelveticaBQMedium.eot') format('embedded-opentype'),
+         url('fonts/HelveticaBQMedium.woff2') format('woff2'),
+         url('fonts/HelveticaBQMedium.woff') format('woff'),
+         url('fonts/HelveticaBQMedium.ttf') format('truetype'),
+         url('fonts/HelveticaBQMedium.svg#HelveticaBQMedium') format('svg');
+}

@@ -1,0 +1,53 @@
+/*
+ *  Node news component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node.node-article.view-mode-teaser {
+  .row {
+    div.col-sm-12 {
+      width: 100%;
+      opacity: 1.0;
+      #pxl-mixins.transition(opacity 300ms ease);
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      .field-name-title {
+        h2 {
+          font-family: @pxl-text-font-bold;
+          letter-spacing: 0.02em;
+          text-transform: none;
+          color: @text-color;
+          #pxl-mixins.font-size-responsive(28px, 23px);
+        }
+      }
+
+      .field-name-body {
+        #pxl-mixins.wysiwyg-body(16px);
+      }
+
+      .field-name-field-image {
+        .field-item {
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+    }
+  }
+}

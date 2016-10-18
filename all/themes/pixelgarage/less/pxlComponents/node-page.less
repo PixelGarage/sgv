@@ -1,0 +1,122 @@
+/*
+ *  Node page component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+.paragraph-title () {
+  font-family: @pxl-text-font;
+  #pxl-mixins.font-size-responsive(82px, 37px);
+  letter-spacing: 0.02em;
+  line-height: 2.5;
+  color: @text-color;
+}
+
+
+// General settings
+// -------------------------
+.node.node-page.view-mode-full {
+  margin: 30px 0;
+
+  >.row {
+    >div.col-sm-12 {
+      width: 100%;
+
+      >.field-name-title {
+        h2 {
+          .paragraph-title();
+        }
+      }
+
+      >.field-name-body {
+        margin: 0 0 20px;
+        #pxl-mixins.wysiwyg-body(16px);
+      }
+
+      >.paragraphs-items {
+        .field-name-field-paragraphs {
+          .entity-paragraphs-item {
+            margin: 0 0 60px;
+
+            // see paragraph-item-... less files
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+.node.node-page.view-mode-teaser {
+  cursor: pointer;
+  margin: 30px 0;
+  opacity: 1.0;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  >.row {
+    >div.col-sm-12 {
+      >.field-name-title {
+        float: none;
+        width: 100%;
+        transition: width 250ms ease-in-out 50ms;
+
+        .field-item {
+          display: inline-block;
+          width: 100%;
+          height: 46px;
+          background: white url(../images/pfeil_schaft.png) repeat-x left center;
+
+          &:after {
+            content: '';
+            display: inline-block;
+            float:right;
+            margin-left: 0;
+            height: 46px;
+            width: 20px;
+            background: white url(../images/pfeil_top.svg) no-repeat left center;
+          }
+
+          h2 {
+            display: inline-block;
+            margin: 0;
+            padding-right: 30px;
+            font-family: @pxl-text-font;
+            #pxl-mixins.font-size-responsive(46px, 37px);
+            letter-spacing: 0.02em;
+            line-height: 1;
+            color: @text-color;
+            background-color: white;
+          }
+
+        }
+      }
+
+      >.field-name-body {
+        margin-left: 60px;
+        padding-top: 10px;
+        width: 490px;
+        #pxl-mixins.wysiwyg-body(16px);
+        transition: margin 300ms ease-in-out 0s;
+      }
+
+      @media @wide {
+        >.field-name-title {
+          float: left;
+          width: 54%;
+        }
+
+        >.field-name-body {
+          margin-left: 57%;
+        }
+      }
+    }
+  }
+}

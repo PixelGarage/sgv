@@ -1,0 +1,69 @@
+/* --------------------------------------------------
+ * Pixelgarage fonts
+ * --------------------------------------------------*/
+//
+// webfont licences
+//@import '../fonts/BrandonGrotesque/BrandonGrotesque-Licence.css';
+
+//
+// Google fonts
+//@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+
+//
+// Awesome icon font
+@import '../fonts/font-awesome/less/font-awesome';
+@fa-font-path: '@{pxl-font-path}/font-awesome/fonts'; // override fa font path (lazy loading)
+
+//
+// Define customer specific fonts
+@pxl-font-path: '../fonts';
+
+// icon font
+@pxl-icon-font: 'fontawesome';
+
+// title font
+@pxl-title-font: 'HelveticaBQMedium';
+
+// text fonts
+@pxl-text-font: 'HelveticaBQMedium';
+@pxl-text-font-light: 'HelveticaBQRoman';
+@pxl-text-font-medium: @pxl-text-font;
+@pxl-text-font-bold: 'HelveticaBQMedium';
+@pxl-text-font-italic: 'HelveticaBQMedium';
+@pxl-text-font-light-italic: 'HelveticaBQRoman';
+@pxl-text-font-medium-italic: @pxl-text-font;
+@pxl-text-font-bold-italic: 'HelveticaBQMedium';
+
+// form font
+@pxl-form-font: @pxl-text-font;
+
+// overrides
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// overrides
+@font-family-base: @pxl-text-font;
+
+//
+// font faces
+//
+@font-face {
+  font-family: 'HelveticaBQRoman';
+  src: url('@{pxl-font-path}/HelveticaBQRoman/HelveticaBQRoman.eot');
+  src: url('@{pxl-font-path}/HelveticaBQRoman/HelveticaBQRoman.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/HelveticaBQRoman/HelveticaBQRoman.woff2') format('woff2'),
+  url('@{pxl-font-path}/HelveticaBQRoman/HelveticaBQRoman.woff') format('woff'),
+  url('@{pxl-font-path}/HelveticaBQRoman/HelveticaBQRoman.ttf') format('truetype'),
+  url('@{pxl-font-path}/HelveticaBQRoman/HelveticaBQRoman.svg#HelveticaBQRoman') format('svg');
+}
+@font-face {
+  font-family: 'HelveticaBQMedium';
+  src: url('@{pxl-font-path}/HelveticaBQMedium/HelveticaBQMedium.eot');
+  src: url('@{pxl-font-path}/HelveticaBQMedium/HelveticaBQMedium.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/HelveticaBQMedium/HelveticaBQMedium.woff2') format('woff2'),
+  url('@{pxl-font-path}/HelveticaBQMedium/HelveticaBQMedium.woff') format('woff'),
+  url('@{pxl-font-path}/HelveticaBQMedium/HelveticaBQMedium.ttf') format('truetype'),
+  url('@{pxl-font-path}/HelveticaBQMedium/HelveticaBQMedium.svg#HelveticaBQMedium') format('svg');
+}

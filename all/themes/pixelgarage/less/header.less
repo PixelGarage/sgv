@@ -1,0 +1,148 @@
+/*
+ *  Header section (navigation)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+body.navbar-is-fixed-top {
+  padding-top: 110px !important;
+
+  &.admin-menu {
+    padding-top: 110px !important;
+  }
+
+}
+
+
+header#navbar {
+  border-bottom: none;
+  background: transparent none;
+
+  .container, .container-fluid {
+    .navbar-header {
+      // header (branding)
+      margin: 0;
+
+      a.logo {
+        display: inline-block;
+        margin: 0 @grid-gutter-width 0 0;
+        padding: 0;
+        width: 200px;
+        height: 32px;
+        background: #fff url(../images/logo_sgv_minimal.svg) no-repeat top left/contain;
+        #pxl-mixins.transition(all 300ms ease-in-out);
+
+        img {
+          display: none;
+        }
+      }
+
+      a.navbar-brand {
+        display: none;
+      }
+
+      .navbar-toggle {
+        // navbar toggle with burger
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: none;
+
+        .icon-bar {
+          border-radius: 0;
+          height: 3px;
+          margin-top: 5px;
+          width: 28px;
+          background-color: @text-color;
+        }
+
+        &:hover {
+          .icon-bar {
+            background-color: @pxl-color-red;
+          }
+        }
+      }
+
+      @media @special-break {
+        a.logo {
+          width: 313px;
+          height: 62px;
+          background: #fff url(../images/logo_sgv.svg) no-repeat top left/contain;
+        }
+
+        .navbar-toggle {
+          padding: 15px 0;
+        }
+      }
+    }
+
+    // collapse part
+    .navbar-collapse {
+      nav {
+        // main menu
+        ul.navbar-nav {
+          float: none;
+          display: block;
+          margin: 0;
+
+          li {
+            a {
+              padding: 10px @grid-gutter-width/2;
+              font-family: @pxl-text-font-bold;
+              font-size: 23px;
+              letter-spacing: 0.04em;
+              line-height: 1;
+              color: @text-color;
+              background: none;
+
+              &:hover,
+              &.active {
+                color: @pxl-color-red;
+              }
+            }
+          }
+        }
+
+        // navigation region
+        .region-navigation {
+          float: none;
+          display: block;
+
+          // see block-language.less
+        }
+      }
+    }
+
+    @media @collapse-break {
+      .navbar-collapse {
+        nav {
+          ul.navbar-nav {
+            float:left;
+
+            li {
+              a {
+                padding: 32px @grid-gutter-width/2 0;
+                font-size: @font-size-base;
+              }
+            }
+          }
+
+          .region-navigation {
+            float:right;
+          }
+        }
+      }
+    }
+
+  }
+}
+

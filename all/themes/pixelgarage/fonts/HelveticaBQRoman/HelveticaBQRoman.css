@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'HelveticaBQRoman';
+    src: url('fonts/HelveticaBQRoman.eot');
+    src: url('fonts/HelveticaBQRoman.eot') format('embedded-opentype'),
+         url('fonts/HelveticaBQRoman.woff2') format('woff2'),
+         url('fonts/HelveticaBQRoman.woff') format('woff'),
+         url('fonts/HelveticaBQRoman.ttf') format('truetype'),
+         url('fonts/HelveticaBQRoman.svg#HelveticaBQRoman') format('svg');
+}
