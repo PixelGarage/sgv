@@ -27,3 +27,26 @@ function pixelgarage_preprocess_page(&$vars) {
 }
 
 
+/**
+ * Adapts the exposed search form to show placeholders in search fields.
+ *
+ */
+function pixelgarage_preprocess_views_exposed_form(&$vars) {
+  //
+  // add placeholders to search exposed form items
+  $form = &$vars['form'];
+  if ($form['#id'] != 'views-exposed-form-members-block') return;
+
+  foreach ($form['#info'] as $id => $info) {
+    // add the description as placeholder to the widget
+    $placeholder = $info['description'] ? $info['description'] : $info['label'];
+    $form[$info['value']]['#attributes']['placeholder'] = $placeholder;
+    $form[$info['value']]['#printed'] = false;
+
+    // render widget again
+    $field = $form[$info['value']];
+    $vars['widgets'][$id]->widget = drupal_render($field);
+  }
+}
+
+

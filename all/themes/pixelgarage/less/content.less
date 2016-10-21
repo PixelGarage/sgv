@@ -52,6 +52,32 @@ body {
   min-height: 320px;
 
   .main-container {
+    position: relative;
+
+    //
+    // anchor menu for paragraphs (created in js)
+    .menu-anchor-container {
+      position: absolute;
+      top: 100px;
+      left: @grid-gutter-width;
+      padding: 20px;
+      background-color: white;
+      //#pxl-mixins.box-shadow(0 0 10px @pxl-color-gray);
+      z-index: 10;
+
+      ul.menu-anchor {
+        #pxl-mixins.no-list-style();
+
+        li.leaf {
+          #pxl-mixins.no-list-style();
+
+          a {
+
+          }
+        }
+      }
+    }
+
     .container, .container-fluid {
       //
       // Page header

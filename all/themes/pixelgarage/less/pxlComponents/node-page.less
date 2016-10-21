@@ -56,6 +56,7 @@
   cursor: pointer;
   margin: 30px 0;
   opacity: 1.0;
+  #pxl-mixins.transition(opacity 300ms ease-in-out);
 
   &:hover {
     opacity: 0.6;
@@ -66,30 +67,19 @@
       >.field-name-title {
         float: none;
         width: 100%;
-        transition: width 250ms ease-in-out 50ms;
+        #pxl-mixins.transition(width 250ms ease-in-out 50ms);
 
         .field-item {
           display: inline-block;
           width: 100%;
           height: 46px;
-          background: white url(../images/pfeil_schaft.png) repeat-x left center;
-
-          &:after {
-            content: '';
-            display: inline-block;
-            float:right;
-            margin-left: 0;
-            height: 46px;
-            width: 20px;
-            background: white url(../images/pfeil_top.svg) no-repeat left center;
-          }
 
           h2 {
             display: inline-block;
             margin: 0;
             padding-right: 30px;
             font-family: @pxl-text-font;
-            #pxl-mixins.font-size-responsive(46px, 37px);
+            #pxl-mixins.font-size-responsive(46px, 28px);
             letter-spacing: 0.02em;
             line-height: 1;
             color: @text-color;
@@ -100,13 +90,36 @@
       }
 
       >.field-name-body {
-        margin-left: 60px;
+        margin-left: 0;
         padding-top: 10px;
-        width: 490px;
+        width: 100%;
         #pxl-mixins.wysiwyg-body(16px);
-        transition: margin 300ms ease-in-out 0s;
+        #pxl-mixins.transition(margin 300ms ease-in-out 0s);
       }
 
+      @media @special-break {
+        // add arrow as background
+        >.field-name-title {
+          .field-item {
+            background: white url(../images/pfeil_schaft.png) repeat-x left center;
+
+            &:after {
+              content: '';
+              display: inline-block;
+              float:right;
+              margin-left: 0;
+              height: 46px;
+              width: 20px;
+              background: white url(../images/pfeil_top.svg) no-repeat left center;
+            }
+          }
+        }
+
+        >.field-name-body {
+          margin-left: 60px;
+          width: 490px;
+        }
+      }
       @media @wide {
         >.field-name-title {
           float: left;

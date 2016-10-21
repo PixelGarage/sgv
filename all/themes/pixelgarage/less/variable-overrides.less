@@ -8,7 +8,7 @@
 //== Colors
 //
 @pxl-color-red: #e1001a;
-@pxl-color-yellow: #ffff00;
+@pxl-color-gray: #808080;
 @pxl-color-black: #000000;
 
 @pxl-color-main: @pxl-color-red;
@@ -17,7 +17,7 @@
 @pxl-color-border: #5f5e5e;
 @pxl-color-border-active: @pxl-color-main;
 
-@pxl-color-body-bg: @pxl-color-yellow;
+@pxl-color-body-bg: #fff;
 @pxl-color-box-bg: @pxl-color-red;
 
 
@@ -52,7 +52,7 @@
 @text-color:            @pxl-color-black;
 @text-color-disabled:   @gray-lighter;
 @text-color-field:      @pxl-color-black;
-@text-color-placeholder: @pxl-color-red;
+@text-color-placeholder: @pxl-color-gray;
 
 @font-size-base:          16px;
 @font-size-large:         ceil((@font-size-base * 1.25));
@@ -140,7 +140,7 @@
 @grid-gutter-width-tablet:  110px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-@grid-float-breakpoint:     @screen-sm-min;
+@grid-float-breakpoint:     @screen-md-min;
 //** Point at which the navbar begins collapsing.
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 

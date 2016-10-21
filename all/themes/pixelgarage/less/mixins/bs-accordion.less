@@ -15,37 +15,68 @@
     margin: 0;
 
     .panel {
+      margin: 0;
       border: none;
       background: transparent none;
       #pxl-mixins.box-shadow(none);
 
       .panel-heading {
-        padding: 0 0 10px;
-        background-color: transparent;
+        position: relative;
+        margin-bottom: 0;
+        padding: 0;
+        font-family: @pxl-text-font;
+        #pxl-mixins.border-radius(0);
+        background: none;
 
         .panel-title {
+          display: inline-block;
+          width: 100%;
+
           a {
+            display: block;
+            width: 100%;
+            padding: 9px 10px 11px;
             font-family: @pxl-text-font-bold;
-            font-size: @font-size-large;
+            letter-spacing: 0.02em;
             color: @text-color;
+            line-height: 1.2;
+            #pxl-mixins.font-size-responsive(28px, 23px);
             text-decoration: none;
 
             &:hover, &.active {
               text-decoration: none;
             }
+          }
+        }
 
-            span.fa {
-              margin: 0 10px;
+        &:hover {
+          .panel-title {
+            a {
+              color: @pxl-color-red;
             }
           }
         }
+
       }
 
       .panel-collapse {
+        margin: 0 -@grid-gutter-width/2;
+        padding: 10px @grid-gutter-width/2;
+        background-color: #222;
+
+        @media @collapse-break {
+          margin: 0 -@grid-gutter-width;
+          padding: 10px @grid-gutter-width;
+        }
+
         .panel-body {
-          padding: 0 0 20px;
+          margin: 10px 0;
+          padding: 10px 10px 20px;
+          font-family: @pxl-text-font;
+          color: @text-color;
           border: none;
 
+          // see user profile
         }
       }
     }
