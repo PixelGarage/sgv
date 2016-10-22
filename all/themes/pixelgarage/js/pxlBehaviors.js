@@ -46,40 +46,73 @@
   Drupal.behaviors.createParagraphAnchorMenu = {
     attach: function () {
       // add anchor menu container
-      var $mainContainer = $('.main-container');
-
-      $mainContainer.prepend('<div class="menu-anchor-container"><ul class="menu-anchor"></ul></div>');
-
-      var $anchorMenu = $mainContainer.find('.menu-anchor'),
-        $anchorMenuCont = $mainContainer.find('.menu-anchor-container'),
+      var $mainContainer = $('.main-container'),
         $paragraphItems = $('#block-system-main').find('.entity-paragraphs-item');
 
-      // add anchor menu for each paragraph
-      $anchorMenuCont.hide();
-      $paragraphItems.each(function(index) {
-        var $item = $(this),
+      // leave for pages without paragraphs
+      if ($paragraphItems.length <= 0) return;
+
+      //
+      // create anchor menu in main container
+      $mainContainer.once('anchor-menu', function() {
+        $mainContainer.prepend('<div class="menu-anchor-container"><div class="menu-anchor-label">Menu</div><ul class="menu-anchor"></ul></div>');
+
+        var $anchorMenu = $mainContainer.find('.menu-anchor'),
+          $anchorMenuLabel = $mainContainer.find('.menu-anchor-label'),
+          $anchorMenuCont = $mainContainer.find('.menu-anchor-container');
+
+        //
+        // add anchor menu entry for each paragraph, if corresponding anchor title exists
+        $anchorMenuCont.hide();
+        $paragraphItems.each(function(index) {
+          var $item = $(this),
             anchor = 'paragraph-item-' + index,
             anchorTitle = $item.attr('data-anchor-title') ? $item.attr('data-anchor-title') : false;
 
-        // add anchor (id) to paragraph
-        $item.attr('id', anchor);
+          // add anchor (id) to paragraph
+          $item.attr('id', anchor);
 
-        // create anchor menu for paragraph
-        if (anchorTitle) {
-          $anchorMenu.append('<li class="leaf"><a href="#' + anchor + '">' + anchorTitle + '</a></li>');
-          $anchorMenuCont.show();
-        }
-      });
-
-      //
-      // position anchor menu during scrolling
-      if ($anchorMenuCont.is(':visible')) {
-        $(window).on('scroll', function() {
-          var scrollPos = $(window).scrollTop();
-
-          $anchorMenuCont.css({'top': scrollPos});
+          // create anchor menu for paragraph
+          if (anchorTitle) {
+            $anchorMenu.append('<li class="leaf"><a href="#' + anchor + '">' + anchorTitle + '</a></li>');
+            $anchorMenuCont.show();
+          }
         });
-      }
+
+        //
+        // animate anchor menu, if visible
+        if ($anchorMenuCont.is(':visible')) {
+          //
+          // expand anchor menu on mouse hover
+          $anchorMenu.hide();
+          $anchorMenuCont.hover(
+            function() {
+              // mouse over
+              $anchorMenuLabel.hide();
+              $anchorMenu.fadeIn(500);
+            }, function() {
+              // mouse out
+              $anchorMenuLabel.fadeIn(500);
+              $anchorMenu.hide();
+            });
+
+          //
+          // position anchor menu during scrolling
+          $(window).on('scroll resize', function() {
+            var scrollPos = $(window).scrollTop();
+
+            if ($(window).width() < 1024) {
+              // hide menu
+              $anchorMenuCont.hide();
+            }
+            else {
+              // animate menu to position
+              $anchorMenuCont.show();
+              $anchorMenuCont.animate({'top': scrollPos+20}, {duration:300, queue:false, easing:'swing'});
+            }
+          });
+        }
+      }); // once
     }
   };
 

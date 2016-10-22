@@ -11771,15 +11771,33 @@ body .main-container {
 body .main-container .menu-anchor-container {
   position: absolute;
   top: 100px;
-  left: 30px;
-  padding: 20px;
-  background-color: white;
+  left: 0;
+  padding: 0;
   z-index: 10;
 }
+body .main-container .menu-anchor-container .menu-anchor-label {
+  position: relative;
+  padding: 5px 20px;
+  color: white;
+  background-color: black;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
+  -webkit-transform: translateX(-100%) rotate(-90deg);
+  -moz-transform: translateX(-100%) rotate(-90deg);
+  -ms-transform: translateX(-100%) rotate(-90deg);
+  -o-transform: translateX(-100%) rotate(-90deg);
+  transform: translateX(-100%) rotate(-90deg);
+}
 body .main-container .menu-anchor-container ul.menu-anchor {
+  display: block;
   list-style: none;
   margin: 0;
   padding: 0;
+  padding: 20px;
+  border: 1px solid #efefef;
+  background-color: white;
 }
 body .main-container .menu-anchor-container ul.menu-anchor li.leaf {
   list-style: none;

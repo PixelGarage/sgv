@@ -59,14 +59,26 @@ body {
     .menu-anchor-container {
       position: absolute;
       top: 100px;
-      left: @grid-gutter-width;
-      padding: 20px;
-      background-color: white;
-      //#pxl-mixins.box-shadow(0 0 10px @pxl-color-gray);
+      left: 0;
+      padding: 0;
+      //#pxl-mixins.box-shadow(1px 1px 10px  2px @pxl-color-gray);
       z-index: 10;
 
+      .menu-anchor-label {
+        position: relative;
+        padding: 5px 20px;
+        color: white;
+        background-color: black;
+        .transform-origin(top right);
+        #pxl-mixins.transform(translateX(-100%) rotate(-90deg));
+      }
+
       ul.menu-anchor {
+        display: block;
         #pxl-mixins.no-list-style();
+        padding: 20px;
+        border: 1px solid #efefef;
+        background-color: white;
 
         li.leaf {
           #pxl-mixins.no-list-style();
