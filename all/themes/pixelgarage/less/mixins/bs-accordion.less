@@ -36,23 +36,16 @@
             display: block;
             width: 100%;
             padding: 9px 10px 11px;
-            font-family: @pxl-text-font-bold;
-            letter-spacing: 0.02em;
-            color: @text-color;
-            line-height: 1.2;
-            #pxl-mixins.font-size-responsive(28px, 23px);
             text-decoration: none;
-
-            &:hover, &.active {
-              text-decoration: none;
-            }
+            .paragraph-item-title();
           }
         }
 
-        &:hover {
+        &:hover, &.active {
           .panel-title {
             a {
               color: @pxl-color-red;
+              text-decoration: none;
             }
           }
         }

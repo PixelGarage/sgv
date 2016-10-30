@@ -16,6 +16,28 @@
   color: @text-color;
 }
 
+.paragraph-subtitle () {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-family: @pxl-text-font;
+  #pxl-mixins.font-size-responsive(46px, 28px);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  color: @text-color;
+}
+
+.paragraph-item-title () {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-family: @pxl-text-font-bold;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: @text-color;
+  line-height: 1.2;
+  #pxl-mixins.font-size-responsive(28px, 23px);
+}
+
+
 
 // General settings
 // -------------------------
@@ -53,6 +75,7 @@
 
 
 .node.node-page.view-mode-teaser {
+  // list of pages in front page
   cursor: pointer;
   margin: 30px 0;
   opacity: 1.0;
@@ -78,12 +101,8 @@
             display: inline-block;
             margin: 0;
             padding-right: 30px;
-            font-family: @pxl-text-font;
-            #pxl-mixins.font-size-responsive(46px, 28px);
-            letter-spacing: 0.02em;
-            line-height: 1;
-            color: @text-color;
             background-color: white;
+            .paragraph-subtitle();
           }
 
         }

@@ -99,14 +99,13 @@
           //
           // position anchor menu during scrolling
           $(window).on('scroll resize', function() {
-            var scrollPos = $(window).scrollTop();
-
             if ($(window).width() < 1024) {
               // hide menu
               $anchorMenuCont.hide();
             }
             else {
               // animate menu to position
+              var scrollPos = $(window).scrollTop();
               $anchorMenuCont.show();
               $anchorMenuCont.animate({'top': scrollPos+20}, {duration:300, queue:false, easing:'swing'});
             }
