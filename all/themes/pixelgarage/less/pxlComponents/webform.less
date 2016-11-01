@@ -26,17 +26,18 @@
 
 // button colors
 @webform-color-submit: @pxl-color-body-bg;
-@webform-color-submit-bg: @pxl-color-main;
+@webform-color-submit-bg: @pxl-color-active;
 
 
 // Mixins
 // -------------------------
 .form-label() {
+  margin-bottom: 0;
   width: auto;
   font-family: @pxl-text-font;
-  #pxl-mixins.font-size-responsive(19px, 14px);
+  #pxl-mixins.font-size-responsive(30px, 24px);
   font-weight: normal;
-  letter-spacing: normal;
+  letter-spacing: 0.03em;
   text-align: left;
   text-transform: none;
   color: @webform-color-label;
@@ -55,7 +56,7 @@
   #pxl-mixins.font-size-responsive(27px, 20px);
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
+  text-transform: none;
   color: @color;
   outline: none;
   #pxl-mixins.border-radius(@radius);
@@ -72,7 +73,13 @@
 // Webform settings
 // -------------------------
 form.webform-client-form {
+  position:relative;
   margin-top: 20px;
+  margin-bottom: 300px;
+
+  @media @narrow {
+    margin-bottom: 200px;
+  }
 
   // all fieldsets
   fieldset.panel {
@@ -248,7 +255,7 @@ form.webform-client-form {
   }
 
   .webform-component {
-    margin: 0 auto 30px;
+    margin: 0 auto 40px;
     padding: 0;
     max-width: @webform-max-width;
     background: none;
@@ -364,17 +371,17 @@ form.webform-client-form {
       vertical-align: top;
 
       .radio, .checkbox {
-        > label {
+        > .control-label {
           padding-left: 20px;
           font-family: @pxl-text-font-light;
-          font-size: 13px;
+          font-size: 17px;
           //#pxl-mixins.font-size-responsive(19px, 14px);
           text-align: left;
-          vertical-align: top;
+          vertical-align: middle;
 
-          > input.form-radio {
+          > input {
             //display: none;
-            margin: 3px 7px 0 -20px;
+            margin: 5px 7px 0 -20px;
             vertical-align: top;
           }
         }
@@ -448,6 +455,16 @@ form.webform-client-form {
         line-height: 17px;
         text-align: left;
         background: none;
+      }
+
+      &.webform-component--legal {
+        position: absolute;
+        bottom: -300px;
+        left: 0;
+
+        @media @narrow {
+          bottom: -200px;
+        }
       }
     }
 

@@ -43,11 +43,6 @@
         color: @link-color;
         outline: none;
 
-        @media @collapse-break {
-          font-size: @font-size-base;
-          padding: 32px @grid-gutter-width/2 0;
-        }
-
         &.active, &:hover {
           text-decoration: none;
           color: @pxl-color-red;
@@ -57,6 +52,20 @@
       span.locale-untranslated {
         color: @text-color-disabled;
       }
+
+      @media @collapse-break {
+        a.language-link {
+          font-size: @font-size-base;
+          padding: 2px 10px 0;
+        }
+
+        &.last {
+          a.language-link {
+            padding-right: 0;
+          }
+        }
+      }
+
     }
   }
 }

@@ -1,0 +1,48 @@
+/*
+ *  Wysiwyg templates component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+table.template-course {
+  caption {
+    padding: 0;
+
+    h2 {
+      font-family: @pxl-text-font-bold;
+      font-weight: 700;
+      #pxl-mixins.font-size-responsive(20px, 17px) !important;
+      letter-spacing: 0.04em;
+      color: @text-color;
+    }
+  }
+
+  tbody {
+    font-family: @pxl-text-font;
+    #pxl-mixins.font-size-responsive(16px, 15px);
+    letter-spacing: 0.04em;
+
+    tr {
+      td {
+        &:first-child {
+          width: 50px;
+          border-right: 1px solid @pxl-color-black;
+        }
+
+        &:last-child {
+          padding-left: 30px;
+          width: auto;
+        }
+      }
+    }
+  }
+}

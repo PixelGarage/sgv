@@ -8699,197 +8699,6 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
  * Pixelgarage Components
  * --------------------------------------------------*/
 /*
- *  Login form component
- *  (see inc/login.inc for login form alteration)
- * --------------------------------------------------*/
-#user_register_form,
-#user_login_form,
-#user-create-account,
-#user_pass_form {
-  clear: both;
-  float: none;
-  width: auto;
-}
-/* User login page */
-form#user-login {
-  position: relative;
-  padding: 2em;
-  border: none;
-}
-/* account register form */
-#user-create-account {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0 2em;
-  width: 100%;
-}
-@media screen and (min-width: 64em) {
-  #user-create-account {
-    padding: 2em;
-    width: 50%;
-  }
-}
-#user-create-account .form-actions-wrapper {
-  position: relative;
-  padding: 1em 0 0;
-}
-#user-create-account .login-register {
-  border: none;
-  color: #fff;
-  -moz-border-radius: 0.25em;
-  -webkit-border-radius: 0.25em;
-  border-radius: 0.25em;
-  background-image: -webkit-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: -o-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: linear-gradient(to bottom, #a70014 0%, #410008 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa70014', endColorstr='#ff410008', GradientType=0);
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  vertical-align: middle;
-  margin: 0;
-}
-#user-create-account .login-register:hover {
-  color: #fff;
-  background-image: -webkit-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: -o-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: linear-gradient(to bottom, #410008 0%, #a70014 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff410008', endColorstr='#ffa70014', GradientType=0);
-  text-decoration: none;
-}
-/* user login form */
-#user_login_form {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0 2em;
-  width: 100%;
-  border: 0;
-  border-bottom: 1px solid #eeeeee;
-}
-@media screen and (min-width: 64em) {
-  #user_login_form {
-    padding: 2em;
-    width: 50%;
-    border: 0;
-    border-right: 1px solid #eeeeee;
-  }
-}
-#user_login_form .form-actions-wrapper {
-  position: relative;
-  padding: 1em 0 0;
-}
-#user_login_form .form-actions-wrapper .form-actions {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  vertical-align: middle;
-  margin: 0;
-}
-#user_login_form .form-actions-wrapper .form-actions .btn {
-  border: none;
-  color: #fff;
-  -moz-border-radius: 0.25em;
-  -webkit-border-radius: 0.25em;
-  border-radius: 0.25em;
-  background-image: -webkit-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: -o-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: linear-gradient(to bottom, #a70014 0%, #410008 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa70014', endColorstr='#ff410008', GradientType=0);
-  background-image: -webkit-linear-gradient(top, #2698f2 0%, #0a62a8 100%);
-  background-image: -o-linear-gradient(top, #2698f2 0%, #0a62a8 100%);
-  background-image: linear-gradient(to bottom, #2698f2 0%, #0a62a8 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2698f2', endColorstr='#ff0a62a8', GradientType=0);
-}
-#user_login_form .form-actions-wrapper .form-actions .btn:hover {
-  color: #fff;
-  background-image: -webkit-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: -o-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: linear-gradient(to bottom, #410008 0%, #a70014 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff410008', endColorstr='#ffa70014', GradientType=0);
-  text-decoration: none;
-}
-#user_login_form .form-actions-wrapper .form-actions .btn:hover {
-  background-image: -webkit-linear-gradient(top, #0a62a8 0%, #2698f2 100%);
-  background-image: -o-linear-gradient(top, #0a62a8 0%, #2698f2 100%);
-  background-image: linear-gradient(to bottom, #0a62a8 0%, #2698f2 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0a62a8', endColorstr='#ff2698f2', GradientType=0);
-}
-#user_login_form .form-actions-wrapper .login-password {
-  display: inline-block;
-  margin: 0.5em 0;
-  color: #2698f2;
-}
-#user_login_form .form-actions-wrapper .login-password:hover {
-  color: #2698f2;
-  text-decoration: underline;
-}
-/* User register / password forms */
-#user-register-form,
-#user-pass {
-  display: inline-block;
-  max-width: 40em;
-  vertical-align: top;
-  margin: 1em 0;
-}
-#user-register-form .form-actions,
-#user-pass .form-actions {
-  margin-top: 2em;
-}
-#user-register-form .form-actions .back-to-login,
-#user-pass .form-actions .back-to-login {
-  float: left;
-  margin: 0;
-}
-#user-register-form .form-actions .back-to-login .login-account,
-#user-pass .form-actions .back-to-login .login-account {
-  display: inline-block;
-  margin-top: 0.5em;
-  color: #2698f2;
-}
-#user-register-form .form-actions .back-to-login .login-account:hover,
-#user-pass .form-actions .back-to-login .login-account:hover {
-  color: #2698f2;
-  text-decoration: underline;
-}
-#user-register-form .form-actions .back-to-login:before,
-#user-pass .form-actions .back-to-login:before {
-  display: inline;
-  font-family: "fontawesome";
-  content: '\f112';
-  color: #2698f2;
-  text-align: center;
-  padding: 0.3em;
-}
-#user-register-form .form-actions .btn,
-#user-pass .form-actions .btn {
-  border: none;
-  color: #fff;
-  -moz-border-radius: 0.25em;
-  -webkit-border-radius: 0.25em;
-  border-radius: 0.25em;
-  background-image: -webkit-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: -o-linear-gradient(top, #a70014 0%, #410008 100%);
-  background-image: linear-gradient(to bottom, #a70014 0%, #410008 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa70014', endColorstr='#ff410008', GradientType=0);
-  float: right;
-}
-#user-register-form .form-actions .btn:hover,
-#user-pass .form-actions .btn:hover {
-  color: #fff;
-  background-image: -webkit-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: -o-linear-gradient(top, #410008 0%, #a70014 100%);
-  background-image: linear-gradient(to bottom, #410008 0%, #a70014 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff410008', endColorstr='#ffa70014', GradientType=0);
-  text-decoration: none;
-}
-/*
  *  ShareThis component
  * --------------------------------------------------*/
 @font-face {
@@ -9097,12 +8906,6 @@ form#user-login {
   color: #000000;
   outline: none;
 }
-@media screen and (min-width: 64em) {
-  #block-locale-language ul.language-switcher-locale-url > li a.language-link {
-    font-size: 16px;
-    padding: 32px 15px 0;
-  }
-}
 #block-locale-language ul.language-switcher-locale-url > li a.language-link.active,
 #block-locale-language ul.language-switcher-locale-url > li a.language-link:hover {
   text-decoration: none;
@@ -9111,13 +8914,35 @@ form#user-login {
 #block-locale-language ul.language-switcher-locale-url > li span.locale-untranslated {
   color: #eeeeee;
 }
+@media screen and (min-width: 64em) {
+  #block-locale-language ul.language-switcher-locale-url > li a.language-link {
+    font-size: 16px;
+    padding: 2px 10px 0;
+  }
+  #block-locale-language ul.language-switcher-locale-url > li.last a.language-link {
+    padding-right: 0;
+  }
+}
 /*
  *  Chosen select component
  * --------------------------------------------------*/
 .form-select.chosen-container-single {
+  margin: 0;
   padding: 0;
+  width: 100% !important;
+  border: none;
+  border-bottom: 1px solid #000000;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 .form-select.chosen-container-single a.chosen-single {
+  white-space: normal;
+  max-width: 100%;
   padding: 0 0 0 8px;
   height: 36px;
   color: #444;
@@ -9128,6 +8953,10 @@ form#user-login {
   box-shadow: none;
 }
 .form-select.chosen-container-single a.chosen-single span {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
   height: 36px;
   line-height: 36px;
 }
@@ -9146,8 +8975,7 @@ form#user-login {
   background-position: -18px 7px;
 }
 .form-select.chosen-container-single .chosen-drop {
-  border: none;
-  border-bottom: 1px solid #000000;
+  border: 1px solid #000000;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -9159,6 +8987,52 @@ form#user-login {
 .form-select.chosen-container-single .chosen-drop ul.chosen-results li.active-result.highlighted {
   color: #000000;
   background: #f4f4f4;
+}
+/*
+ *  Wysiwyg templates component
+ * --------------------------------------------------*/
+table.template-course caption {
+  padding: 0;
+}
+table.template-course caption h2 {
+  font-family: 'HelveticaBQMedium';
+  font-weight: 700;
+  font-size: 17px !important;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+@media screen and (min-width: 40.8em) {
+  table.template-course caption h2 {
+    font-size: 2.60416667vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  table.template-course caption h2 {
+    font-size: 20px;
+  }
+}
+table.template-course tbody {
+  font-family: 'HelveticaBQMedium';
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+@media screen and (min-width: 45em) {
+  table.template-course tbody {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  table.template-course tbody {
+    font-size: 16px;
+  }
+}
+table.template-course tbody tr td:first-child {
+  width: 50px;
+  border-right: 1px solid #000000;
+}
+table.template-course tbody tr td:last-child {
+  padding-left: 30px;
+  width: auto;
 }
 /*
  *  Node page component
@@ -9335,7 +9209,7 @@ form#user-login {
   min-height: 350px;
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .paragraphs-items .field-name-field-paragraphs .entity-paragraphs-item {
-  margin: 0 0 60px;
+  margin: 0 auto 60px;
 }
 .node.node-page.view-mode-teaser {
   cursor: pointer;
@@ -9980,25 +9854,789 @@ form#user-login {
   height: auto;
 }
 /*
+ *  Login form component
+ *  (see inc/login.inc for login form alteration)
+ * --------------------------------------------------*/
+#user_register_form,
+#user_login_form,
+#user-create-account,
+#user_pass_form {
+  clear: both;
+  float: none;
+  width: auto;
+}
+/* User login page */
+form#user-login {
+  position: relative;
+  padding: 2em;
+  border: none;
+}
+/* account register form */
+#user-create-account {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0 2em;
+  width: 100%;
+}
+@media screen and (min-width: 64em) {
+  #user-create-account {
+    padding: 2em;
+    width: 50%;
+  }
+}
+#user-create-account .form-actions-wrapper {
+  position: relative;
+  padding: 1em 0 0;
+}
+#user-create-account .login-register {
+  border: none;
+  color: #fff;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  border-radius: 0.25em;
+  background-image: -webkit-linear-gradient(top, #a70014 0%, #410008 100%);
+  background-image: -o-linear-gradient(top, #a70014 0%, #410008 100%);
+  background-image: linear-gradient(to bottom, #a70014 0%, #410008 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa70014', endColorstr='#ff410008', GradientType=0);
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  vertical-align: middle;
+  margin: 0;
+}
+#user-create-account .login-register:hover {
+  color: #fff;
+  background-image: -webkit-linear-gradient(top, #410008 0%, #a70014 100%);
+  background-image: -o-linear-gradient(top, #410008 0%, #a70014 100%);
+  background-image: linear-gradient(to bottom, #410008 0%, #a70014 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff410008', endColorstr='#ffa70014', GradientType=0);
+  text-decoration: none;
+}
+/* user login form */
+#user_login_form {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0 2em;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #eeeeee;
+}
+@media screen and (min-width: 64em) {
+  #user_login_form {
+    padding: 2em;
+    width: 50%;
+    border: 0;
+    border-right: 1px solid #eeeeee;
+  }
+}
+#user_login_form .form-actions-wrapper {
+  position: relative;
+  padding: 1em 0 0;
+}
+#user_login_form .form-actions-wrapper .form-actions {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  vertical-align: middle;
+  margin: 0;
+}
+#user_login_form .form-actions-wrapper .form-actions .btn {
+  border: none;
+  color: #fff;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  border-radius: 0.25em;
+  background-image: -webkit-linear-gradient(top, #a70014 0%, #410008 100%);
+  background-image: -o-linear-gradient(top, #a70014 0%, #410008 100%);
+  background-image: linear-gradient(to bottom, #a70014 0%, #410008 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa70014', endColorstr='#ff410008', GradientType=0);
+  background-image: -webkit-linear-gradient(top, #2698f2 0%, #0a62a8 100%);
+  background-image: -o-linear-gradient(top, #2698f2 0%, #0a62a8 100%);
+  background-image: linear-gradient(to bottom, #2698f2 0%, #0a62a8 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2698f2', endColorstr='#ff0a62a8', GradientType=0);
+}
+#user_login_form .form-actions-wrapper .form-actions .btn:hover {
+  color: #fff;
+  background-image: -webkit-linear-gradient(top, #410008 0%, #a70014 100%);
+  background-image: -o-linear-gradient(top, #410008 0%, #a70014 100%);
+  background-image: linear-gradient(to bottom, #410008 0%, #a70014 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff410008', endColorstr='#ffa70014', GradientType=0);
+  text-decoration: none;
+}
+#user_login_form .form-actions-wrapper .form-actions .btn:hover {
+  background-image: -webkit-linear-gradient(top, #0a62a8 0%, #2698f2 100%);
+  background-image: -o-linear-gradient(top, #0a62a8 0%, #2698f2 100%);
+  background-image: linear-gradient(to bottom, #0a62a8 0%, #2698f2 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0a62a8', endColorstr='#ff2698f2', GradientType=0);
+}
+#user_login_form .form-actions-wrapper .login-password {
+  display: inline-block;
+  margin: 0.5em 0;
+  color: #2698f2;
+}
+#user_login_form .form-actions-wrapper .login-password:hover {
+  color: #2698f2;
+  text-decoration: underline;
+}
+/* User register / password forms */
+#user-register-form,
+#user-pass {
+  display: inline-block;
+  max-width: 40em;
+  vertical-align: top;
+  margin: 1em 0;
+}
+#user-register-form .form-actions,
+#user-pass .form-actions {
+  margin-top: 2em;
+}
+#user-register-form .form-actions .back-to-login,
+#user-pass .form-actions .back-to-login {
+  float: left;
+  margin: 0;
+}
+#user-register-form .form-actions .back-to-login .login-account,
+#user-pass .form-actions .back-to-login .login-account {
+  display: inline-block;
+  margin-top: 0.5em;
+  color: #2698f2;
+}
+#user-register-form .form-actions .back-to-login .login-account:hover,
+#user-pass .form-actions .back-to-login .login-account:hover {
+  color: #2698f2;
+  text-decoration: underline;
+}
+#user-register-form .form-actions .back-to-login:before,
+#user-pass .form-actions .back-to-login:before {
+  display: inline;
+  font-family: "fontawesome";
+  content: '\f112';
+  color: #2698f2;
+  text-align: center;
+  padding: 0.3em;
+}
+#user-register-form .form-actions .btn,
+#user-pass .form-actions .btn {
+  border: none;
+  color: #fff;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  border-radius: 0.25em;
+  background-image: -webkit-linear-gradient(top, #a70014 0%, #410008 100%);
+  background-image: -o-linear-gradient(top, #a70014 0%, #410008 100%);
+  background-image: linear-gradient(to bottom, #a70014 0%, #410008 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa70014', endColorstr='#ff410008', GradientType=0);
+  float: right;
+}
+#user-register-form .form-actions .btn:hover,
+#user-pass .form-actions .btn:hover {
+  color: #fff;
+  background-image: -webkit-linear-gradient(top, #410008 0%, #a70014 100%);
+  background-image: -o-linear-gradient(top, #410008 0%, #a70014 100%);
+  background-image: linear-gradient(to bottom, #410008 0%, #a70014 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff410008', endColorstr='#ffa70014', GradientType=0);
+  text-decoration: none;
+}
+/*
  *  User profile component
  * --------------------------------------------------*/
-.user-profile .row .col-sm-12,
-.user-profile .row .col-sm-6 {
+.user-profile .row .col-sm-4,
+.user-profile .row .col-sm-8,
+.user-profile .row .col-sm-12 {
+  font-family: 'HelveticaBQMedium';
   color: #fff;
 }
-.user-profile .row .col-sm-12 .field-name-field-website .field-item a,
-.user-profile .row .col-sm-6 .field-name-field-website .field-item a {
+.user-profile .row .col-sm-4 .field-name-field-area-of-expertise,
+.user-profile .row .col-sm-8 .field-name-field-area-of-expertise,
+.user-profile .row .col-sm-12 .field-name-field-area-of-expertise {
+  margin-bottom: 60px;
+}
+.user-profile .row .col-sm-4 .field-name-field-area-of-expertise .field-item,
+.user-profile .row .col-sm-8 .field-name-field-area-of-expertise .field-item,
+.user-profile .row .col-sm-12 .field-name-field-area-of-expertise .field-item {
+  display: block;
+}
+.user-profile .row .col-sm-4 .field-name-field-plz,
+.user-profile .row .col-sm-8 .field-name-field-plz,
+.user-profile .row .col-sm-12 .field-name-field-plz {
+  display: inline-block;
+}
+.user-profile .row .col-sm-4 .field-name-field-location,
+.user-profile .row .col-sm-8 .field-name-field-location,
+.user-profile .row .col-sm-12 .field-name-field-location {
+  display: inline-block;
+}
+.user-profile .row .col-sm-4 .field-name-field-website .field-item a,
+.user-profile .row .col-sm-8 .field-name-field-website .field-item a,
+.user-profile .row .col-sm-12 .field-name-field-website .field-item a {
   color: #fff;
   text-decoration: none;
 }
-.user-profile .row .col-sm-12 .field-name-field-website .field-item a:hover,
-.user-profile .row .col-sm-6 .field-name-field-website .field-item a:hover {
+.user-profile .row .col-sm-4 .field-name-field-website .field-item a:hover,
+.user-profile .row .col-sm-8 .field-name-field-website .field-item a:hover,
+.user-profile .row .col-sm-12 .field-name-field-website .field-item a:hover {
+  color: #e1001a;
+  text-decoration: none;
+}
+.user-profile .row .col-sm-4 .field-name-field-image,
+.user-profile .row .col-sm-8 .field-name-field-image,
+.user-profile .row .col-sm-12 .field-name-field-image {
+  margin-bottom: 30px;
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item h1,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item h1,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item h1,
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item h2,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item h2,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item h2,
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item h3,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item h3,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item h3 {
+  font-family: 'HelveticaBQMedium';
+  font-size: 23px;
+  letter-spacing: 0.02em;
+}
+@media screen and (min-width: 39.42857142857143em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h1,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item h1,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item h1,
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h2,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item h2,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item h2,
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h3,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item h3,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item h3 {
+    font-size: 3.64583333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h1,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item h1,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item h1,
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h2,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item h2,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item h2,
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h3,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item h3,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item h3 {
+    font-size: 28px;
+  }
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item h4,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item h4,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item h4,
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item h5,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item h5,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item h5,
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item h6,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item h6,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item h6 {
+  font-family: 'HelveticaBQMedium';
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+@media screen and (min-width: 40em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h4,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item h4,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item h4,
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h5,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item h5,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item h5,
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h6,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item h6,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item h6 {
+    font-size: 3.125vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h4,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item h4,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item h4,
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h5,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item h5,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item h5,
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h6,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item h6,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item h6 {
+    font-size: 24px;
+  }
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item p,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item p,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item p,
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item tbody td,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item tbody td,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item tbody td {
+  font-family: 'HelveticaBQMedium';
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+@media screen and (min-width: 45em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item p,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item p,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item p,
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item tbody td,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item tbody td,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item tbody td {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item p,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item p,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item p,
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item tbody td,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item tbody td,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item tbody td {
+    font-size: 16px;
+  }
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item a,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item a,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item a {
+  font-family: 'HelveticaBQMedium';
+  font-size: 15px;
+  color: #000000;
+}
+@media screen and (min-width: 45em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item a,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item a,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item a {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item a,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item a,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item a {
+    font-size: 16px;
+  }
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item a:hover,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item a:hover,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item a:hover,
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item a:focus,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item a:focus,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item a:focus {
   color: #000000;
   text-decoration: none;
+  background: none;
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item pre,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item pre,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item pre,
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item address,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item address,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item address {
+  font-family: 'HelveticaBQMedium';
+  font-size: 15px;
+}
+@media screen and (min-width: 45em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item pre,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item pre,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item pre,
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item address,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item address,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item address {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item pre,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item pre,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item pre,
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item address,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item address,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item address {
+    font-size: 16px;
+  }
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item strong,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item strong,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item strong {
+  font-family: 'HelveticaBQMedium';
+  font-size: 16px;
+}
+@media screen and (min-width: 42.666666666666664em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item strong,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item strong,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item strong {
+    font-size: 2.34375vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item strong,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item strong,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item strong {
+    font-size: 18px;
+  }
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item hr,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item hr,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item hr {
+  border: 0;
+  border-bottom: 2px solid #000000;
+  background: none;
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item img,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item img,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item img {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item embed,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item embed,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item embed,
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item video,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item video,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item video,
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item audio,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item audio,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item audio,
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item iframe,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item iframe,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item iframe {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 350px;
+}
+/*
+ *  User profile form component
+ * --------------------------------------------------*/
+form#user-profile-form {
+  margin: 0 auto 30px;
+  max-width: 100%;
+}
+form#user-profile-form div fieldset.panel,
+form#user-profile-form div #edit-account {
+  margin: 20px 0 30px;
+  padding: 0;
+  border: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-color: #fff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+form#user-profile-form div fieldset.panel .panel-heading,
+form#user-profile-form div #edit-account .panel-heading {
+  margin: 20px 0;
+  padding: 0;
+  border: none;
+  background: none;
+  text-align: left;
+}
+form#user-profile-form div fieldset.panel .panel-heading .panel-title,
+form#user-profile-form div #edit-account .panel-heading .panel-title {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-family: 'HelveticaBQMedium';
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: #000000;
+  line-height: 1.2;
+  font-size: 23px;
+}
+@media screen and (min-width: 39.42857142857143em) {
+  form#user-profile-form div fieldset.panel .panel-heading .panel-title,
+  form#user-profile-form div #edit-account .panel-heading .panel-title {
+    font-size: 3.64583333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  form#user-profile-form div fieldset.panel .panel-heading .panel-title,
+  form#user-profile-form div #edit-account .panel-heading .panel-title {
+    font-size: 28px;
+  }
+}
+form#user-profile-form div fieldset.panel .panel-body,
+form#user-profile-form div #edit-account .panel-body {
+  margin: 0;
+  padding: 0;
+}
+form#user-profile-form div .form-wrapper {
+  margin-bottom: 30px;
+}
+form#user-profile-form div .form-wrapper .form-item label.control-label {
+  display: block;
+}
+form#user-profile-form div .form-wrapper .form-item input.form-control {
+  margin: 0;
+  height: 36px;
+  font-family: 'HelveticaBQMedium';
+  font-size: 16px;
+  color: #000000;
+  border: none;
+  border-bottom: 1px solid #000000;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: #fff;
+}
+form#user-profile-form div .form-wrapper .form-item input.form-control::-moz-placeholder {
+  color: #808080;
+  opacity: 1;
+}
+form#user-profile-form div .form-wrapper .form-item input.form-control:-ms-input-placeholder {
+  color: #808080;
+}
+form#user-profile-form div .form-wrapper .form-item input.form-control::-webkit-input-placeholder {
+  color: #808080;
+}
+form#user-profile-form div .form-wrapper .form-item input.form-control:focus {
+  -webkit-box-shadow: 0 0 2px rgba(100, 100, 100, 0.75) inset;
+  -moz-box-shadow: 0 0 2px rgba(100, 100, 100, 0.75) inset;
+  box-shadow: 0 0 2px rgba(100, 100, 100, 0.75) inset;
+  border: 1px solid #000000;
+}
+form#user-profile-form div .form-wrapper .form-item .help-block {
+  font-family: 'HelveticaBQMedium';
+  font-size: 11px;
+  color: #808080;
+}
+form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper textarea {
+  border: none;
+  border-bottom: 1px solid #000000;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: #fff;
+}
+form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper textarea::-moz-placeholder {
+  color: #808080;
+  opacity: 1;
+}
+form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper textarea:-ms-input-placeholder {
+  color: #808080;
+}
+form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper textarea::-webkit-input-placeholder {
+  color: #808080;
+}
+form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper textarea:focus {
+  -webkit-box-shadow: 0 0 2px rgba(100, 100, 100, 0.75) inset;
+  -moz-box-shadow: 0 0 2px rgba(100, 100, 100, 0.75) inset;
+  box-shadow: 0 0 2px rgba(100, 100, 100, 0.75) inset;
+  border: 1px solid #000000;
+}
+form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper .grippie {
+  display: none;
+}
+form#user-profile-form div .form-wrapper .form-item .form-radios,
+form#user-profile-form div .form-wrapper .form-item .form-checkboxes {
+  vertical-align: top;
+}
+form#user-profile-form div .form-wrapper .form-item .form-radios .radio > .control-label,
+form#user-profile-form div .form-wrapper .form-item .form-checkboxes .radio > .control-label,
+form#user-profile-form div .form-wrapper .form-item .form-radios .checkbox > .control-label,
+form#user-profile-form div .form-wrapper .form-item .form-checkboxes .checkbox > .control-label {
+  padding-left: 20px;
+  font-family: 'HelveticaBQRoman';
+  font-size: 17px;
+  text-align: left;
+  vertical-align: middle;
+}
+form#user-profile-form div .form-wrapper .form-item .form-radios .radio > .control-label > input,
+form#user-profile-form div .form-wrapper .form-item .form-checkboxes .radio > .control-label > input,
+form#user-profile-form div .form-wrapper .form-item .form-radios .checkbox > .control-label > input,
+form#user-profile-form div .form-wrapper .form-item .form-checkboxes .checkbox > .control-label > input {
+  margin: 5px 7px 0 -20px;
+  vertical-align: top;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file {
+  display: block;
+  position: relative;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: #fff;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .input-group {
+  display: block;
+  position: relative;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .input-group input {
+  display: inline-block;
+  float: none;
+  margin: 0 -2px;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid #000000;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: #fff;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .input-group input::-moz-placeholder {
+  color: #808080;
+  opacity: 1;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .input-group input:-ms-input-placeholder {
+  color: #808080;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .input-group input::-webkit-input-placeholder {
+  color: #808080;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .input-group .input-group-btn {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 -2px;
+  width: auto;
+  z-index: 10;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .input-group .input-group-btn button.form-submit {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  font-family: 'HelveticaBQMedium';
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #fff;
+  outline: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background-color: #000;
+  opacity: 1.0;
+  font-size: 15px;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .input-group .input-group-btn button.form-submit:hover,
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .input-group .input-group-btn button.form-submit:focus {
+  opacity: 0.7;
+}
+@media screen and (min-width: 45em) {
+  form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .input-group .input-group-btn button.form-submit {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .input-group .input-group-btn button.form-submit {
+    font-size: 16px;
+  }
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .form-group {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .form-group span.file {
+  display: inline-block;
+  vertical-align: middle;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .form-group span.file > img {
+  display: none;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .form-group span.file a {
+  vertical-align: middle;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data button.form-submit {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  font-family: 'HelveticaBQMedium';
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #fff;
+  outline: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background-color: #000;
+  opacity: 1.0;
+  font-size: 15px;
+  display: block;
+}
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data button.form-submit:hover,
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data button.form-submit:focus {
+  opacity: 0.7;
+}
+@media screen and (min-width: 45em) {
+  form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data button.form-submit {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data button.form-submit {
+    font-size: 16px;
+  }
+}
+form#user-profile-form div .form-actions {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 15px;
+}
+form#user-profile-form div .form-actions .form-submit {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  font-family: 'HelveticaBQMedium';
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #fff;
+  outline: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  background-color: #000;
+  opacity: 1.0;
+}
+form#user-profile-form div .form-actions .form-submit:hover,
+form#user-profile-form div .form-actions .form-submit:focus {
+  opacity: 0.7;
+}
+form#user-profile-form div .form-actions .form-submit .icon {
+  display: none;
 }
 /*
  *  Page intro paragraph component
  * --------------------------------------------------*/
+.entity-paragraphs-item.paragraphs-item-page-intro {
+  max-width: 960px;
+  margin: 0 auto;
+}
 .entity-paragraphs-item.paragraphs-item-page-intro .content .field-name-field-text .field-item p {
   font-family: 'HelveticaBQMedium';
   letter-spacing: 0.02em;
@@ -10018,21 +10656,27 @@ form#user-login {
 /*
  *  Text paragraph component
  * --------------------------------------------------*/
+.entity-paragraphs-item.paragraphs-item-text-paragraph {
+  max-width: 960px;
+  margin: 0 auto;
+}
 .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-title .field-item {
+  margin: 20px 0 10px;
+  padding: 0;
   font-family: 'HelveticaBQMedium';
-  font-size: 37px;
+  font-size: 28px;
   letter-spacing: 0.02em;
-  line-height: 2.5;
+  line-height: 1.1;
   color: #000000;
 }
-@media screen and (min-width: 21.658536585365855em) {
+@media screen and (min-width: 29.217391304347824em) {
   .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-title .field-item {
-    font-size: 10.67708333vw;
+    font-size: 5.98958333vw;
   }
 }
 @media screen and (min-width: 48em) {
   .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-title .field-item {
-    font-size: 82px;
+    font-size: 46px;
   }
 }
 .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item h1,
@@ -10183,6 +10827,10 @@ form#user-login {
 /*
  *  Text paragraph component
  * --------------------------------------------------*/
+.entity-paragraphs-item.paragraphs-item-2-column-text-paragraph {
+  max-width: 960px;
+  margin: 0 auto;
+}
 .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-title .field-item {
   font-family: 'HelveticaBQMedium';
   font-size: 37px;
@@ -10392,6 +11040,10 @@ form#user-login {
 /*
  *  Block paragraph component
  * --------------------------------------------------*/
+.entity-paragraphs-item.paragraphs-item-block-paragraph {
+  max-width: 960px;
+  margin: 0 auto;
+}
 .entity-paragraphs-item.paragraphs-item-block-paragraph .content .field-name-field-title .field-item {
   font-family: 'HelveticaBQMedium';
   font-size: 37px;
@@ -11064,6 +11716,7 @@ form#user-login {
 }
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row {
   display: inline-block;
+  position: relative;
   margin: 0 0 15px;
   padding: 15px;
   width: 100%;
@@ -11084,6 +11737,26 @@ form#user-login {
     font-size: 16px;
   }
 }
+.view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row .document-ext {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-family: 'HelveticaBQMedium';
+  letter-spacing: 0.02em;
+  color: #000000;
+  line-height: 1;
+  font-size: 23px;
+}
+@media screen and (min-width: 39.42857142857143em) {
+  .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row .document-ext {
+    font-size: 3.64583333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row .document-ext {
+    font-size: 28px;
+  }
+}
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:hover,
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:focus {
   background-color: #262626;
@@ -11092,11 +11765,22 @@ form#user-login {
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:focus .views-field-title a {
   color: white;
 }
+.view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:hover .document-ext,
+.view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:focus .document-ext {
+  color: white;
+}
 /*
  *  Webform Addons component
  * --------------------------------------------------*/
 form.webform-client-form {
+  position: relative;
   margin-top: 20px;
+  margin-bottom: 300px;
+}
+@media screen and (min-width: 30em) {
+  form.webform-client-form {
+    margin-bottom: 200px;
+  }
 }
 form.webform-client-form fieldset.panel {
   margin: 0 auto 30px;
@@ -11244,14 +11928,14 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
+  text-transform: none;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border: 1px solid #e1001a;
-  background-color: #e1001a;
+  border: 1px solid #000000;
+  background-color: #000000;
   font-size: 14px;
 }
 @media screen and (min-width: 35.55555555555556em) {
@@ -11266,7 +11950,7 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
 }
 form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.draggable td button:hover,
 form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.draggable td button:focus {
-  color: #e1001a;
+  color: #000000;
   background: none;
 }
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file {
@@ -11295,14 +11979,14 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
+  text-transform: none;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border: 1px solid #e1001a;
-  background-color: #e1001a;
+  border: 1px solid #000000;
+  background-color: #000000;
   font-size: 16px;
   z-index: 10;
 }
@@ -11318,11 +12002,11 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
 }
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button:hover,
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button:focus {
-  color: #e1001a;
+  color: #000000;
   background: none;
 }
 form.webform-client-form .webform-component {
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
   padding: 0;
   max-width: 100%;
   background: none;
@@ -11339,23 +12023,24 @@ form.webform-client-form .webform-component[class*="-city"] {
   width: 70%;
 }
 form.webform-client-form .webform-component label {
+  margin-bottom: 0;
   width: auto;
   font-family: 'HelveticaBQMedium';
-  font-size: 14px;
+  font-size: 24px;
   font-weight: normal;
-  letter-spacing: normal;
+  letter-spacing: 0.03em;
   text-align: left;
   text-transform: none;
   color: #000000;
 }
-@media screen and (min-width: 35.36842105263158em) {
+@media screen and (min-width: 38.4em) {
   form.webform-client-form .webform-component label {
-    font-size: 2.47395833vw;
+    font-size: 3.90625vw;
   }
 }
 @media screen and (min-width: 48em) {
   form.webform-client-form .webform-component label {
-    font-size: 19px;
+    font-size: 30px;
   }
 }
 form.webform-client-form .webform-component label span.form-required {
@@ -11495,21 +12180,21 @@ form.webform-client-form .webform-component .form-radios,
 form.webform-client-form .webform-component .form-checkboxes {
   vertical-align: top;
 }
-form.webform-client-form .webform-component .form-radios .radio > label,
-form.webform-client-form .webform-component .form-checkboxes .radio > label,
-form.webform-client-form .webform-component .form-radios .checkbox > label,
-form.webform-client-form .webform-component .form-checkboxes .checkbox > label {
+form.webform-client-form .webform-component .form-radios .radio > .control-label,
+form.webform-client-form .webform-component .form-checkboxes .radio > .control-label,
+form.webform-client-form .webform-component .form-radios .checkbox > .control-label,
+form.webform-client-form .webform-component .form-checkboxes .checkbox > .control-label {
   padding-left: 20px;
   font-family: 'HelveticaBQRoman';
-  font-size: 13px;
+  font-size: 17px;
   text-align: left;
-  vertical-align: top;
+  vertical-align: middle;
 }
-form.webform-client-form .webform-component .form-radios .radio > label > input.form-radio,
-form.webform-client-form .webform-component .form-checkboxes .radio > label > input.form-radio,
-form.webform-client-form .webform-component .form-radios .checkbox > label > input.form-radio,
-form.webform-client-form .webform-component .form-checkboxes .checkbox > label > input.form-radio {
-  margin: 3px 7px 0 -20px;
+form.webform-client-form .webform-component .form-radios .radio > .control-label > input,
+form.webform-client-form .webform-component .form-checkboxes .radio > .control-label > input,
+form.webform-client-form .webform-component .form-radios .checkbox > .control-label > input,
+form.webform-client-form .webform-component .form-checkboxes .checkbox > .control-label > input {
+  margin: 5px 7px 0 -20px;
   vertical-align: top;
 }
 form.webform-client-form .webform-component .form-managed-file {
@@ -11568,14 +12253,14 @@ form.webform-client-form .webform-component .form-managed-file button.btn {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
+  text-transform: none;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border: 1px solid #e1001a;
-  background-color: #e1001a;
+  border: 1px solid #000000;
+  background-color: #000000;
   padding: 0 12px;
   font-size: 14px;
   line-height: 1.2;
@@ -11592,7 +12277,7 @@ form.webform-client-form .webform-component .form-managed-file button.btn {
 }
 form.webform-client-form .webform-component .form-managed-file button.btn:hover,
 form.webform-client-form .webform-component .form-managed-file button.btn:focus {
-  color: #e1001a;
+  color: #000000;
   background: none;
 }
 @media screen and (min-width: 39.529411764705884em) {
@@ -11625,6 +12310,16 @@ form.webform-client-form .webform-component.webform-component-markup p {
   line-height: 17px;
   text-align: left;
   background: none;
+}
+form.webform-client-form .webform-component.webform-component-markup.webform-component--legal {
+  position: absolute;
+  bottom: -300px;
+  left: 0;
+}
+@media screen and (min-width: 30em) {
+  form.webform-client-form .webform-component.webform-component-markup.webform-component--legal {
+    bottom: -200px;
+  }
 }
 form.webform-client-form .webform-component.webform-container-inline {
   position: relative;
@@ -11679,14 +12374,14 @@ form.webform-client-form div.form-actions button.webform-submit {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
+  text-transform: none;
   color: #fff;
   outline: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border: 1px solid #e1001a;
-  background-color: #e1001a;
+  border: 1px solid #000000;
+  background-color: #000000;
 }
 @media screen and (min-width: 35.55555555555556em) {
   form.webform-client-form div.form-actions button.webform-submit {
@@ -11700,7 +12395,7 @@ form.webform-client-form div.form-actions button.webform-submit {
 }
 form.webform-client-form div.form-actions button.webform-submit:hover,
 form.webform-client-form div.form-actions button.webform-submit:focus {
-  color: #e1001a;
+  color: #000000;
   background: none;
 }
 form.webform-client-form div.form-actions a.back-link {
@@ -11712,14 +12407,14 @@ form.webform-client-form div.form-actions a.back-link {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
+  text-transform: none;
   color: #000000;
   outline: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border: 1px solid #e1001a;
-  background-color: #e1001a;
+  border: 1px solid #000000;
+  background-color: #000000;
   font-size: 18px;
   padding-left: 0;
   border: none;
@@ -11738,7 +12433,7 @@ form.webform-client-form div.form-actions a.back-link {
 }
 form.webform-client-form div.form-actions a.back-link:hover,
 form.webform-client-form div.form-actions a.back-link:focus {
-  color: #e1001a;
+  color: #000000;
   background: none;
 }
 @media screen and (min-width: 36em) {
@@ -11760,16 +12455,15 @@ form.webform-client-form div.form-actions a.done-link {
   font-size: 20px;
   line-height: 27px;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
-  color: #000000;
+  text-transform: none;
   outline: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border: 1px solid #e1001a;
-  background-color: #e1001a;
+  border: 1px solid #000000;
+  background-color: #000000;
   font-size: 18px;
-  color: #e1001a;
+  color: #000000;
   padding-left: 0;
   border: none;
   background: none;
@@ -11787,7 +12481,7 @@ form.webform-client-form div.form-actions a.done-link {
 }
 form.webform-client-form div.form-actions a.done-link:hover,
 form.webform-client-form div.form-actions a.done-link:focus {
-  color: #e1001a;
+  color: #000000;
   background: none;
 }
 @media screen and (min-width: 36em) {
@@ -11931,7 +12625,9 @@ header#navbar {
 }
 header#navbar .container .navbar-header,
 header#navbar .container-fluid .navbar-header {
+  position: relative;
   margin: 0;
+  z-index: 10;
 }
 header#navbar .container .navbar-header a.logo,
 header#navbar .container-fluid .navbar-header a.logo {
@@ -11984,11 +12680,20 @@ header#navbar .container-fluid .navbar-header .navbar-toggle:hover .icon-bar {
     padding: 15px 0;
   }
 }
+header#navbar .container .navbar-collapse,
+header#navbar .container-fluid .navbar-collapse {
+  position: relative;
+}
 header#navbar .container .navbar-collapse nav ul.navbar-nav,
 header#navbar .container-fluid .navbar-collapse nav ul.navbar-nav {
   float: none;
   display: block;
   margin: 0;
+}
+header#navbar .container .navbar-collapse nav ul.navbar-nav li,
+header#navbar .container-fluid .navbar-collapse nav ul.navbar-nav li {
+  display: block;
+  float: none;
 }
 header#navbar .container .navbar-collapse nav ul.navbar-nav li a,
 header#navbar .container-fluid .navbar-collapse nav ul.navbar-nav li a {
@@ -11999,6 +12704,7 @@ header#navbar .container-fluid .navbar-collapse nav ul.navbar-nav li a {
   line-height: 1;
   color: #000000;
   background: none;
+  outline: none;
 }
 header#navbar .container .navbar-collapse nav ul.navbar-nav li a:hover,
 header#navbar .container-fluid .navbar-collapse nav ul.navbar-nav li a:hover,
@@ -12014,16 +12720,35 @@ header#navbar .container-fluid .navbar-collapse nav .region-navigation {
 @media screen and (min-width: 64em) {
   header#navbar .container .navbar-collapse nav ul.navbar-nav,
   header#navbar .container-fluid .navbar-collapse nav ul.navbar-nav {
-    float: left;
+    position: absolute;
+    top: 30px;
+    left: 330px;
+  }
+  header#navbar .container .navbar-collapse nav ul.navbar-nav li,
+  header#navbar .container-fluid .navbar-collapse nav ul.navbar-nav li {
+    display: inline-block;
   }
   header#navbar .container .navbar-collapse nav ul.navbar-nav li a,
   header#navbar .container-fluid .navbar-collapse nav ul.navbar-nav li a {
-    padding: 32px 15px 0;
+    padding: 2px 10px 0;
     font-size: 16px;
+  }
+  header#navbar .container .navbar-collapse nav ul.navbar-nav.secondary,
+  header#navbar .container-fluid .navbar-collapse nav ul.navbar-nav.secondary {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    text-align: right;
+  }
+  header#navbar .container .navbar-collapse nav ul.navbar-nav.secondary li.last a,
+  header#navbar .container-fluid .navbar-collapse nav ul.navbar-nav.secondary li.last a {
+    padding-right: 0;
   }
   header#navbar .container .navbar-collapse nav .region-navigation,
   header#navbar .container-fluid .navbar-collapse nav .region-navigation {
-    float: right;
+    position: absolute;
+    top: 30px;
+    right: 15px;
   }
 }
 /*
@@ -12183,6 +12908,6 @@ body .main-container .fading.fading-bottom {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffffff', GradientType=0);
 }
-/* --------------------------------------------------
- * Pixelgarage Footer
+/*
+ *  Content section (main content)
  * --------------------------------------------------*/

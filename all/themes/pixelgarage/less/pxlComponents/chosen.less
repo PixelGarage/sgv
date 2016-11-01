@@ -14,9 +14,18 @@
 // Main settings
 // -------------------------
 .form-select.chosen-container-single {
+  margin: 0;
   padding: 0;
+  width: 100% !important;
+  border: none;
+  border-bottom: 1px solid @text-color;
+  #pxl-mixins.border-radius(0);
+  background: none;
+  #pxl-mixins.box-shadow(none);
 
   a.chosen-single {
+    white-space: normal;
+    max-width: 100%;
     padding: 0 0 0 8px;
     height: @pxl-form-control-height;
     color: #444;
@@ -25,6 +34,10 @@
     #pxl-mixins.box-shadow(none);
 
     span {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
       height: @pxl-form-control-height;
       line-height: @pxl-form-control-height;
     }
@@ -54,8 +67,7 @@
   }
 
   .chosen-drop {
-    border: none;
-    border-bottom: 1px solid @text-color;
+    border: 1px solid @text-color;
     #pxl-mixins.border-radius(0);
     #pxl-mixins.box-shadow(none);
     background: #fff;
