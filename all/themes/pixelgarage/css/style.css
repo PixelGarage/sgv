@@ -9236,9 +9236,6 @@ table.template-course tbody tr td:last-child {
 }
 .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-title .field-item h2 {
   display: inline-block;
-  margin: 0;
-  padding-right: 30px;
-  background-color: white;
   margin: 20px 0 10px;
   padding: 0;
   font-family: 'HelveticaBQMedium';
@@ -9246,6 +9243,9 @@ table.template-course tbody tr td:last-child {
   letter-spacing: 0.02em;
   line-height: 1.1;
   color: #000000;
+  margin: 0;
+  padding-right: 30px;
+  background-color: white;
 }
 @media screen and (min-width: 29.217391304347824em) {
   .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-title .field-item h2 {
