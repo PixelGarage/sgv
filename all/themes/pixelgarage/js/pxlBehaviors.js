@@ -28,11 +28,19 @@
    */
    Drupal.behaviors.fullSizeClickableItems = {
     attach: function () {
-      var $clickableItems = $('.node-page.node-teaser');
+      var $clickableItems = $('.node-page.node-teaser').add('.view-documents .views-row');
 
       $clickableItems.once('click', function () {
         $(this).on('click', function () {
-          window.location = $(this).find("a:first").attr("href");
+          var url = $(this).find("a:first").attr("href"),
+              newWindow = $(this).find("a:first").attr("target") == '_blank';
+
+          if (newWindow) {
+            window.open(url, '_blank');
+          }
+          else {
+            window.location = url;
+          }
           return false;
         });
       });

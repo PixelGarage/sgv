@@ -16,6 +16,9 @@
 // -------------------------
 .view.view-members {
   .view-filters {
+    max-width: @paragraph-max-width;
+    margin: 0 auto;
+
     .views-exposed-form {
       .views-exposed-widgets {
         margin-bottom: 30px;
@@ -26,6 +29,10 @@
           margin: 0 10px;
           padding: 0;
           vertical-align: top;
+
+          &:first-child {
+            margin-left: 0;
+          }
 
           label, .description {
             display: none;

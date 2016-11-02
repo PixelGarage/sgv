@@ -9425,7 +9425,7 @@ table.template-course tbody tr td:last-child {
   }
   .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body {
     margin-left: 60px;
-    width: 490px;
+    width: 410px;
   }
 }
 @media screen and (min-width: 80em) {
@@ -11040,10 +11040,6 @@ form#user-profile-form div .form-actions .form-submit .icon {
 /*
  *  Block paragraph component
  * --------------------------------------------------*/
-.entity-paragraphs-item.paragraphs-item-block-paragraph {
-  max-width: 960px;
-  margin: 0 auto;
-}
 .entity-paragraphs-item.paragraphs-item-block-paragraph .content .field-name-field-title .field-item {
   font-family: 'HelveticaBQMedium';
   font-size: 37px;
@@ -11512,6 +11508,10 @@ form#user-profile-form div .form-actions .form-submit .icon {
 /*
  *  View members component
  * --------------------------------------------------*/
+.view.view-members .view-filters {
+  max-width: 960px;
+  margin: 0 auto;
+}
 .view.view-members .view-filters .views-exposed-form .views-exposed-widgets {
   margin-bottom: 30px;
 }
@@ -11521,6 +11521,9 @@ form#user-profile-form div .form-actions .form-submit .icon {
   margin: 0 10px;
   padding: 0;
   vertical-align: top;
+}
+.view.view-members .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget:first-child {
+  margin-left: 0;
 }
 .view.view-members .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label,
 .view.view-members .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .description {
@@ -11592,8 +11595,9 @@ form#user-profile-form div .form-actions .form-submit .icon {
 }
 .view.view-members .view-content .panel-group .panel .panel-heading {
   position: relative;
-  margin-bottom: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 960px;
   font-family: 'HelveticaBQMedium';
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -11645,7 +11649,8 @@ form#user-profile-form div .form-actions .form-submit .icon {
   }
 }
 .view.view-members .view-content .panel-group .panel .panel-collapse .panel-body {
-  margin: 10px 0;
+  max-width: 960px;
+  margin: 10px auto;
   padding: 10px 10px 20px;
   font-family: 'HelveticaBQMedium';
   color: #000000;
@@ -11655,7 +11660,8 @@ form#user-profile-form div .form-actions .form-submit .icon {
  *  View members component
  * --------------------------------------------------*/
 .view.view-documents {
-  margin-top: 60px;
+  max-width: 960px;
+  margin: 60px auto 0;
 }
 .view.view-documents .view-content .view-grouping .view-grouping-header {
   margin: 20px 0 10px;
@@ -11768,6 +11774,20 @@ form#user-profile-form div .form-actions .form-submit .icon {
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:hover .document-ext,
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:focus .document-ext {
   color: white;
+}
+/*
+ *  View news component
+ * --------------------------------------------------*/
+.view.view-news {
+  max-width: 960px;
+  margin: 60px auto 0;
+}
+/*
+ *  View pages component
+ * --------------------------------------------------*/
+.view.view-pages {
+  max-width: 960px;
+  margin: 60px auto 0;
 }
 /*
  *  Webform Addons component
