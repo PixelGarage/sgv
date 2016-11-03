@@ -39,18 +39,27 @@
             padding: 9px 10px 11px;
             text-decoration: none;
             .paragraph-item-title();
-          }
-        }
+            margin: 0;
 
-        &:hover, &.active {
-          .panel-title {
-            a {
+            &[aria-expanded=true] {
               color: @pxl-color-red;
               text-decoration: none;
             }
           }
         }
+        &:hover {     //, &.active
+          .panel-title {
+            a {
+              color: @gray-light;
+              text-decoration: none;
 
+              &[aria-expanded=true] {
+                color: @pxl-color-red;
+                text-decoration: none;
+              }
+            }
+          }
+        }
       }
 
       .panel-collapse {
