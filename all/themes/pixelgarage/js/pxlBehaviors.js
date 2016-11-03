@@ -9,7 +9,6 @@
   /**
    * This behavior adds shadow to header on scroll.
    *
-   */
   Drupal.behaviors.addHeaderShadow = {
     attach: function (context) {
       $(window).on("scroll", function () {
@@ -22,13 +21,14 @@
       });
     }
   };
+   */
 
   /**
    * Allows full size clickable items.
    */
    Drupal.behaviors.fullSizeClickableItems = {
     attach: function () {
-      var $clickableItems = $('.node-page.node-teaser').add('.view-documents .views-row');
+      var $clickableItems = $('.view-pages  .views-row').add('.view-documents .views-row');
 
       $clickableItems.once('click', function () {
         $(this).on('click', function () {
@@ -55,7 +55,9 @@
     attach: function () {
       // add anchor menu container
       var $mainContainer = $('.main-container'),
-        $paragraphItems = $('#block-system-main').find('.entity-paragraphs-item');
+        $paragraphItems = $('#block-system-main').find('.entity-paragraphs-item'),
+        paragraphItemsTop = new Array(),
+        $activeAnchorMenuItem = null;
 
       // leave for pages without paragraphs
       if ($paragraphItems.length <= 0) return;
@@ -65,23 +67,26 @@
       $mainContainer.once('anchor-menu', function() {
         $mainContainer.prepend('<div class="menu-anchor-container"><div class="menu-anchor-label">Menu</div><ul class="menu-anchor"></ul></div>');
 
-        var $anchorMenu = $mainContainer.find('.menu-anchor'),
-          $anchorMenuLabel = $mainContainer.find('.menu-anchor-label'),
-          $anchorMenuCont = $mainContainer.find('.menu-anchor-container');
+        var $anchorMenuCont = $mainContainer.find('.menu-anchor-container'),
+          $anchorMenu = $anchorMenuCont.find('.menu-anchor'),
+          $anchorMenuLabel = $anchorMenuCont.find('.menu-anchor-label');
 
         //
-        // add anchor menu entry for each paragraph, if corresponding anchor title exists
+        // add anchor menu item for each paragraph, if corresponding anchor title exists
         $anchorMenuCont.hide();
         $paragraphItems.each(function(index) {
           var $item = $(this),
             anchor = 'paragraph-item-' + index,
             anchorTitle = $item.attr('data-anchor-title') ? $item.attr('data-anchor-title') : false;
 
-          // add anchor (id) to paragraph
-          $item.attr('id', anchor);
-
-          // create anchor menu for paragraph
+          //
+          // create anchor menu item for paragraph
           if (anchorTitle) {
+            // add anchor (id) to paragraph and store top position of it
+            $item.attr('id', anchor);
+            paragraphItemsTop.push($item.offset().top - 200);
+
+            // append anchor menu item
             $anchorMenu.append('<li class="leaf"><a href="#' + anchor + '">' + anchorTitle + '</a></li>');
             $anchorMenuCont.show();
           }
@@ -90,33 +95,39 @@
         //
         // animate anchor menu, if visible
         if ($anchorMenuCont.is(':visible')) {
-          //
-          // expand anchor menu on mouse hover
-          $anchorMenu.hide();
-          $anchorMenuCont.hover(
-            function() {
-              // mouse over
-              $anchorMenuLabel.hide();
-              $anchorMenu.fadeIn(500);
-            }, function() {
-              // mouse out
-              $anchorMenuLabel.fadeIn(500);
-              $anchorMenu.hide();
-            });
+          $anchorMenuLabel.hide();
 
           //
           // position anchor menu during scrolling
           $(window).on('scroll resize', function() {
-            if ($(window).width() < 1024) {
-              // hide menu
-              $anchorMenuCont.hide();
+            var scrollPos = $(window).scrollTop();
+
+            //
+            // define position of anchor menu
+            if ($(window).width() < 1300) {
+              //  menu position on top of page
+              $anchorMenuCont.css({'position': 'static'});
             }
             else {
               // animate menu to position
-              var scrollPos = $(window).scrollTop();
-              $anchorMenuCont.show();
+              $anchorMenuCont.css({'position': 'absolute'});
               $anchorMenuCont.animate({'top': scrollPos+20}, {duration:300, queue:false, easing:'swing'});
             }
+
+            //
+            // highlight anchor menu according to scroll position
+            $.each( paragraphItemsTop, function( index, paragraphTopPosition ) {
+              if (scrollPos > paragraphTopPosition) {
+                var $anchorMenuItems = $anchorMenu.find('li.leaf a'),
+                  $anchorMenuItem = $($anchorMenuItems[index]);
+
+                if ($activeAnchorMenuItem) {
+                  $activeAnchorMenuItem.removeClass('active');
+                }
+                $anchorMenuItem.addClass('active');
+                $activeAnchorMenuItem = $anchorMenuItem;
+              }
+            });
           });
         }
       }); // once
@@ -128,8 +139,10 @@
    */
   Drupal.behaviors.smoothScrolltoAnchors = {
     attach: function(context, settings) {
-      $(function() {
-        $('.menu-anchor li.leaf a').click(function() {
+      var $anchorMenuItems = $('.menu-anchor li.leaf a');
+
+      $anchorMenuItems.once(function() {
+        $anchorMenuItems.on('click', function() {
           var anchorPos = this.href.indexOf('#'),
             $mainContainer = $('.main-container'),
             mainTop = $mainContainer.offset().top;
@@ -138,11 +151,9 @@
           if (anchorPos == -1) return true;
 
           // menu item references anchor, get anchor target
-          var target = $(this.href.slice(anchorPos));
-          if (target.length) {
-            $('html, body').stop().animate({
-              scrollTop: target.offset().top - mainTop
-            }, 800, 'swing');
+          var $target = $(this.href.slice(anchorPos));
+          if ($target.length) {
+            $('html, body').stop().animate({scrollTop: $target.offset().top - mainTop}, 800, 'swing');
             return false;
           }
           // no target available, perform click

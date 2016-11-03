@@ -11721,6 +11721,7 @@ form#user-profile-form div .form-actions .form-submit .icon {
   }
 }
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row {
+  cursor: pointer;
   display: inline-block;
   position: relative;
   margin: 0 0 15px;
@@ -11770,6 +11771,7 @@ form#user-profile-form div .form-actions .form-submit .icon {
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:hover .views-field-title a,
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:focus .views-field-title a {
   color: white;
+  text-decoration: none;
 }
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:hover .document-ext,
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:focus .document-ext {
@@ -12720,6 +12722,7 @@ header#navbar .container-fluid .navbar-collapse nav ul.navbar-nav li a {
   padding: 10px 15px;
   font-family: 'HelveticaBQMedium';
   font-size: 23px;
+  text-decoration: none;
   letter-spacing: 0.04em;
   line-height: 1;
   color: #000000;
@@ -12855,6 +12858,20 @@ body .main-container .menu-anchor-container ul.menu-anchor li.leaf {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+body .main-container .menu-anchor-container ul.menu-anchor li.leaf a {
+  font-family: 'HelveticaBQMedium';
+  font-size: 16px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: #000000;
+  background: none;
+  outline: none;
+}
+body .main-container .menu-anchor-container ul.menu-anchor li.leaf a:hover,
+body .main-container .menu-anchor-container ul.menu-anchor li.leaf a.active {
+  color: #e1001a;
 }
 body .main-container .container #page-header .region-header h2.block-title,
 body .main-container .container-fluid #page-header .region-header h2.block-title {
