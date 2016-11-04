@@ -6,9 +6,9 @@
 // Variables
 // -------------------------
 //text
-@pxl-login-btn-color: #fff;
+@pxl-login-btn-color: @text-color;
 @pxl-login-btn-hover-color: #fff;
-@pxl-login-link-color: #2698f2;
+@pxl-login-link-color: @text-color;
 @pxl-login-link-hover-color: @pxl-login-link-color;
 //gradients
 @pxl-login-gradient-top: #2698f2;
@@ -22,13 +22,15 @@
 .submit-btn() {
   &:extend(.btn-lg);
   border: none;
-  color: @pxl-login-btn-color;
-  #pxl-mixins.border-radius(0.25em);
-  #gradient.vertical(@pxl-login-gradient-2-top, @pxl-login-gradient-2-bottom);
+  #pxl-mixins.border-radius(0);
+  color: white;
+  background: @pxl-login-btn-color;
+  //#pxl-mixins.border-radius(0.25em);
+  //#gradient.vertical(@pxl-login-gradient-2-top, @pxl-login-gradient-2-bottom);
 
   &:hover {
     color: @pxl-login-btn-hover-color;
-    #gradient.vertical(@pxl-login-gradient-2-bottom, @pxl-login-gradient-2-top);
+    //#gradient.vertical(@pxl-login-gradient-2-bottom, @pxl-login-gradient-2-top);
     text-decoration: none;
   }
 }
@@ -48,9 +50,11 @@
 }
 
 /* User login page */
-form#user-login {
+form#user-login, #user-login-form {
   position: relative;
-  padding: 2em;
+  margin: 0 auto;
+  padding: 0;
+  max-width: @paragraph-max-width;
   border: none;
 }
 
@@ -86,16 +90,16 @@ form#user-login {
 #user_login_form {
   display: inline-block;
   vertical-align: top;
-  padding: 0 0 2em;
+  padding: 0;
   width: 100%;
   border: 0;
-  border-bottom: 1px solid @hr-border;
+  border-bottom: none; //1px solid @hr-border;
 
   @media @normal {
-    padding: 2em;
+    padding: 0;
     width: 50%;
     border: 0;
-    border-right: 1px solid @hr-border;
+    border-right: none; //1px solid @hr-border;
   }
 
   .form-actions-wrapper {
@@ -110,11 +114,11 @@ form#user-login {
       margin: 0;
 
       .btn {
-        .submit-btn;
-        #gradient.vertical(@pxl-login-gradient-top, @pxl-login-gradient-bottom);
+        .submit-btn();
+        //#gradient.vertical(@pxl-login-gradient-top, @pxl-login-gradient-bottom);
 
         &:hover {
-          #gradient.vertical(@pxl-login-gradient-bottom, @pxl-login-gradient-top);
+          //#gradient.vertical(@pxl-login-gradient-bottom, @pxl-login-gradient-top);
         }
       }
     }

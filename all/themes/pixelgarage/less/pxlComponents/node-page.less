@@ -4,7 +4,7 @@
 
 // Variables
 // -------------------------
-@paragraph-max-width: 1000px;
+@paragraph-max-width: 960px;
 @paragraph-margin-bottom: 20px;
 
 
@@ -14,8 +14,12 @@
   font-family: @pxl-text-font;
   #pxl-mixins.font-size-responsive(82px, 37px);
   letter-spacing: 0.02em;
-  line-height: 2.5;
+  line-height: 1;
   color: @text-color;
+
+  @media @normal {
+    line-height: 2.5;
+  }
 }
 
 .paragraph-subtitle () {

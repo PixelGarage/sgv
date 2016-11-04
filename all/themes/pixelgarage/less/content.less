@@ -32,6 +32,10 @@
     width: 100%;
   }
 
+  p {
+    letter-spacing: 0.04em;
+  }
+
   a {
     outline: none;
 
@@ -76,9 +80,14 @@ body {
       ul.menu-anchor {
         display: block;
         #pxl-mixins.no-list-style();
-        padding: 20px;
-        border: 1px solid #efefef;
-        background-color: white;
+        padding-left: @grid-gutter-width/2;
+        border: none;
+        background-color: transparent;
+
+        @media @normal {
+          padding-top: 16px;
+          padding-left: @grid-gutter-width;
+        }
 
         li.leaf {
           #pxl-mixins.no-list-style();
