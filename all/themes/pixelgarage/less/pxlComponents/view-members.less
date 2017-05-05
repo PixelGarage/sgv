@@ -4,7 +4,9 @@
 
 // Variables
 // -------------------------
+@pxl-form-control-height-mobile: 44px;
 @pxl-form-control-height: 36px;
+@pxl-form-control-width-mobile: 100%;
 @pxl-form-control-width: 200px;
 
 // Mixins
@@ -24,9 +26,9 @@
         margin-bottom: 30px;
 
         .views-exposed-widget {
-          display: inline-block;
+          display: block;
           float: none;
-          margin: 0 10px;
+          margin: 0;
           padding: 0;
           vertical-align: top;
 
@@ -36,25 +38,44 @@
 
           label, .description {
             display: none;
+            margin: 0;
+          }
+
+          @media @tablet {
+            display: inline-block;
+            margin: 0 10px;
           }
 
           .form-item {
+            @media @normal {
+              min-width: 200px;
+            }
             .control-label {
               display: none;
             }
 
             .form-control {
               margin: 0;
-              height: @pxl-form-control-height;
-              max-width: @pxl-form-control-width;
+              //padding: 0;
+              height: @pxl-form-control-height-mobile;
+              max-width: @pxl-form-control-width-mobile;
               font-family: @pxl-text-font;
               font-size: @font-size-base;
               color: @text-color;
               border: none;
               border-bottom: 1px solid @text-color;
+              letter-spacing: @text-spacing;
+              line-height: @pxl-form-control-height-mobile;
               #pxl-mixins.border-radius(0);
               #pxl-mixins.box-shadow(none);
               .placeholder(@text-color-placeholder);
+
+              @media @tablet {
+                //padding: 6px 12px;
+                height: @pxl-form-control-height;
+                max-width: @pxl-form-control-width;
+                line-height: @pxl-form-control-height;
+              }
             }
 
             .form-select {
@@ -62,21 +83,24 @@
             }
           }
 
-          &.views-widget-filter-field_area_of_expertise_tid {
-            display: none;
-          }
-          @media @tablet {
-            &.views-widget-filter-field_area_of_expertise_tid {
-              display: inline-block;
-            }
-          }
+          //&.views-widget-filter-field_area_of_expertise_tid, &.views-widget-filter-field_region_tid {
+          //  display: block;
+          //}
+          //@media @tablet {
+          //  &.views-widget-filter-field_area_of_expertise_tid, &.views-widget-filter-field_region_tid {
+          //    display: inline-block;
+          //  }
+          //}
 
         }
 
         .views-submit-button {
           button.form-submit {
+            display: block;
             overflow: hidden;
-            margin: 0;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
             padding: 0;
             width: 45px;
             height: @pxl-form-control-height;
@@ -84,6 +108,12 @@
             border: none;
             #pxl-mixins.border-radius(0);
             background: url(../images/icon_search.svg) no-repeat center center / 60%;
+
+            @media @tablet {
+              display: inline-block;
+              margin: 0;
+              padding: 0;
+            }
 
             &:hover {
               background: url(../images/icon_search_hover.svg) no-repeat center center / 60%;

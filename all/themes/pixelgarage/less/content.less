@@ -5,6 +5,7 @@
 // Variables
 // -------------------------
 @pxl-content-fading-height: 20px;
+@text-spacing: 0.04em;
 
 
 // Mixins
@@ -17,10 +18,11 @@
 .container, .container-fluid {
   // all container with background
   padding: 10px @grid-gutter-width / 2;
+  max-width: @container-large-desktop;
   background-color: #fff;
 
   @media @collapse-break {
-    padding: 10px @grid-gutter-width;
+    padding: 10px @grid-gutter-width 5px;
   }
 
     // sharper fonts
@@ -33,11 +35,12 @@
   }
 
   p {
-    letter-spacing: 0.04em;
+    letter-spacing: @text-spacing;
   }
 
   a {
     outline: none;
+    letter-spacing: @text-spacing;
 
     &.active, &:hover, &:focus {
       outline: none;
@@ -86,7 +89,7 @@ body {
 
         @media @normal {
           padding-top: 16px;
-          padding-left: @grid-gutter-width;
+          padding-left: @grid-gutter-width + 5px;
         }
 
         li.leaf {
@@ -96,13 +99,19 @@ body {
             font-family: @pxl-text-font-bold;
             font-size: @font-size-base;
             text-decoration: none;
-            letter-spacing: 0.04em;
-            line-height: 1;
+            letter-spacing: @text-spacing;
+            line-height: 2.5;
             color: @text-color;
             background: none;
             outline: none;
 
-            &:hover,
+            @media @normal {
+              line-height: 1;
+            }
+
+            &:hover {
+              color: @text-color;
+            }
             &.active {
               color: @pxl-color-red;
             }
@@ -182,23 +191,23 @@ body {
 
     //
     // fading area on top and bottom of main container
-    .fading {
-      display: none; // will be enabled via event
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: @pxl-content-fading-height;
-      z-index: 10;
-
-      &.fading-top {
-        top: 0;
-        #gradient.vertical(#fff, rgba(255,255,255,0));
-      }
-      &.fading-bottom {
-        bottom: 0;
-        #gradient.vertical(rgba(255,255,255,0), #fff);
-      }
-    }
+    //.fading {
+    //  display: none; // will be enabled via event
+    //  position: absolute;
+    //  left: 0;
+    //  right: 0;
+    //  height: @pxl-content-fading-height;
+    //  z-index: 10;
+    //
+    //  &.fading-top {
+    //    top: 0;
+    //    #gradient.vertical(#fff, rgba(255,255,255,0));
+    //  }
+    //  &.fading-bottom {
+    //    bottom: 0;
+    //    #gradient.vertical(rgba(255,255,255,0), #fff);
+    //  }
+    //}
   } // main-container
 
   footer {
