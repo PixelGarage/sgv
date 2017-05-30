@@ -29,13 +29,13 @@ body.navbar-is-fixed-top {
 
 header#navbar {
   border-bottom: none;
-  background: transparent none;
+  background: white none;
 
   .container, .container-fluid {
     padding: 10px @grid-gutter-width / 2 0;
 
     @media @normal {
-      padding: 10px @grid-gutter-width 0;
+      padding: 15px @grid-gutter-width 0;
     }
 
 
@@ -102,6 +102,11 @@ header#navbar {
     // collapse part
     .navbar-collapse {
       position: relative;
+      border: none;
+
+      &.in {
+        #pxl-mixins.box-shadow(0 8px 6px -6px rgba(0, 0, 0, 0.15));
+      }
 
       nav {
         // main menu

@@ -14,15 +14,25 @@
 // General settings
 // -------------------------
 .user-profile {
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
 
   .row {
     .col-sm-4, .col-sm-8, .col-sm-12 {
       font-family: @pxl-text-font;
       color: #fff;
+      padding-left: 7.5px;
+      padding-right: 7.5px;
+
+      .field-name-ds-user-picture {
+        margin-bottom: 25px;
+      }
 
       .field-name-field-area-of-expertise {
-        margin-bottom: 60px;
+        margin-bottom: 25px;
+
+        @media @normal {
+          margin-bottom: 60px;
+        }
 
         .field-item {
           display: block;
@@ -36,8 +46,8 @@
       }
 
       .field-name-field-address {
-        .field-item {
 
+        .field-item {
         }
       }
 
@@ -79,7 +89,7 @@
       }
 
       .field-name-field-image {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
         .field-item {
 
         }
