@@ -54,6 +54,16 @@
 
 html {
   height: 100%;
+
+  // Text Selection Style
+  ::selection {
+    background-color: lighten(@pxl-color-red, 40%);
+  }
+  /* Firefox */
+  ::-moz-selection {
+    background-color: lighten(@pxl-color-red, 40%);
+  }
+
 }
 
 body {

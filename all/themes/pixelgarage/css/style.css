@@ -8932,6 +8932,17 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   }
 }
 /*
+ *  Language block component
+ * --------------------------------------------------*/
+#block-user-login {
+  margin-bottom: 80px;
+}
+@media screen and (min-width: 64em) {
+  #block-user-login {
+    margin-bottom: 120px;
+  }
+}
+/*
  *  Chosen select component
  * --------------------------------------------------*/
 .form-select.chosen-container-single {
@@ -12933,6 +12944,13 @@ header#navbar .container-fluid .navbar-collapse nav .region-navigation {
 }
 html {
   height: 100%;
+  /* Firefox */
+}
+html ::selection {
+  background-color: #ffaeb7;
+}
+html ::-moz-selection {
+  background-color: #ffaeb7;
 }
 body {
   position: relative;
