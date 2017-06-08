@@ -4,6 +4,7 @@
 
 // Variables
 // -------------------------
+@pxl-text-inverted: #ddd;
 
 
 // Mixins
@@ -19,12 +20,29 @@
   .row {
     .col-sm-4, .col-sm-8, .col-sm-12 {
       font-family: @pxl-text-font;
-      color: #fff;
+      color: @pxl-text-inverted;
       padding-left: 7.5px;
       padding-right: 7.5px;
 
       .field-name-ds-user-picture {
         margin-bottom: 25px;
+      }
+
+      .group-address {
+        margin-bottom: 25px;
+
+        @media @normal {
+          margin-bottom: 60px;
+
+        }
+
+        .group-adresse, .group-contact {
+          margin-top: 10px;
+
+          @media @normal {
+            //margin-bottom: 60px;
+          }
+        }
       }
 
       .field-name-field-area-of-expertise {
@@ -36,6 +54,9 @@
 
         .field-item {
           display: block;
+        }
+        .field-label {
+          color: @gray;
         }
       }
 
@@ -70,7 +91,7 @@
       .field-name-field-website {
         .field-item {
           a {
-            color: #fff;
+            color: @pxl-text-inverted;
             text-decoration: none;
 
             &:hover {
@@ -96,6 +117,7 @@
       }
 
       .field-name-field-short-description {
+        margin-bottom: 25px;
         .field-item {
           #pxl-mixins.wysiwyg-body(16px);
         }

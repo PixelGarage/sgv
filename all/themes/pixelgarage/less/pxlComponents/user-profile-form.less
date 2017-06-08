@@ -8,6 +8,8 @@
 @container-inner-margin:  0;
 @fieldset-bg-color: #fff;
 @form-max-width: @paragraph-max-width;
+@bg-color-form-active: #f8f8f8;
+@padding-form-input: 8px;
 
 
 // Mixins
@@ -15,11 +17,11 @@
 .resp-user-button(@size: @font-size-large; @color: #fff; @bg-color: @pxl-color-main; @radius: @border-radius-large) {
   display: inline-block;
   margin: 0;
-  padding: 10px 20px;
+  padding: 12px 20px 10px;
   font-family: @pxl-text-font-bold;
   font-size: @size;
   line-height: 1;
-  letter-spacing: 0;
+  letter-spacing: 0.03em;
   color: @color;
   outline: none;
   #pxl-mixins.border-radius(@radius);
@@ -94,11 +96,15 @@ form#user-profile-form {
       .form-item {
         label.control-label {
           display: block;
+          padding-left: 8px;
           font-weight: normal;
+          font-family: @font-family-sans-serif;
+          letter-spacing: 0.03em;
         }
 
         input.form-control {
           margin: 0;
+          padding: @padding-form-input;
           height: @pxl-form-control-height;
           //max-width: @pxl-form-control-width;
           font-family: @pxl-text-font;
@@ -112,29 +118,41 @@ form#user-profile-form {
           .placeholder(@text-color-placeholder);
 
           &:focus {
-            #pxl-mixins.box-shadow(0 0 2px rgba(100, 100, 100, 0.75) inset);
-            border: 2px solid @text-color;
+            //#pxl-mixins.box-shadow(0 0 2px rgba(100, 100, 100, 0.75) inset);
+            //border-radius: 4px;
+            //background-color: @bg-color-form-active;
+            padding: (@padding-form-input)-1;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,0.6);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,0.6);
+            border: 1px solid #66afe9;
           }
         }
 
-        .help-block {
-          font-family: @pxl-text-font;
+        .help-block, .focal-point-help {
+          font-family: @font-family-sans-serif;
           font-size: 11px;
           color: @pxl-color-gray;
+          letter-spacing: 0.02em;
         }
 
         .form-textarea-wrapper {
           textarea {
+            padding: @padding-form-input;
             border: none;
             border-bottom: 2px solid @text-color;
             #pxl-mixins.border-radius(0);
             #pxl-mixins.box-shadow(none);
             background-color: @fieldset-bg-color;
             .placeholder(@text-color-placeholder);
+            color: @text-color;
 
             &:focus {
-              #pxl-mixins.box-shadow(0 0 2px rgba(100, 100, 100, 0.75) inset);
-              border: 2px solid @text-color;
+              //#pxl-mixins.box-shadow(0 0 2px rgba(100, 100, 100, 0.75) inset);
+              //border: 2px solid @text-color;
+              padding: (@padding-form-input)-1;
+              -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,0.6);
+              box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,0.6);
+              border: 1px solid #66afe9;
             }
           }
 
@@ -145,6 +163,7 @@ form#user-profile-form {
 
         .form-select {
           // see chosen.less
+          color: @text-color;
         }
 
         .form-radios, .form-checkboxes {
@@ -237,10 +256,19 @@ form#user-profile-form {
 
               }
             }
+
+            .form-type-textfield {
+              margin-bottom: 0;
+            }
+
             button.form-submit {
               .resp-user-button(20px, #fff, #000, 0);
               #pxl-mixins.font-size-responsive(16px, 15px);
               display: block;
+
+              &.btn-danger {
+                background-color: @pxl-color-red;
+              }
             }
 
           }
@@ -256,7 +284,7 @@ form#user-profile-form {
       padding-left: 0;
 
       .form-submit {
-        .resp-user-button(28px, #fff, #000, 0);
+        .resp-user-button(22px, #fff, #000, 0);
 
         .icon {
           display: none;

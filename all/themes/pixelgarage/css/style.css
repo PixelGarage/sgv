@@ -10052,7 +10052,7 @@ form#user-login,
 .user-profile .row .col-sm-8,
 .user-profile .row .col-sm-12 {
   font-family: 'HelveticaBQMedium';
-  color: #fff;
+  color: #dddddd;
   padding-left: 7.5px;
   padding-right: 7.5px;
 }
@@ -10060,6 +10060,26 @@ form#user-login,
 .user-profile .row .col-sm-8 .field-name-ds-user-picture,
 .user-profile .row .col-sm-12 .field-name-ds-user-picture {
   margin-bottom: 25px;
+}
+.user-profile .row .col-sm-4 .group-address,
+.user-profile .row .col-sm-8 .group-address,
+.user-profile .row .col-sm-12 .group-address {
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 64em) {
+  .user-profile .row .col-sm-4 .group-address,
+  .user-profile .row .col-sm-8 .group-address,
+  .user-profile .row .col-sm-12 .group-address {
+    margin-bottom: 60px;
+  }
+}
+.user-profile .row .col-sm-4 .group-address .group-adresse,
+.user-profile .row .col-sm-8 .group-address .group-adresse,
+.user-profile .row .col-sm-12 .group-address .group-adresse,
+.user-profile .row .col-sm-4 .group-address .group-contact,
+.user-profile .row .col-sm-8 .group-address .group-contact,
+.user-profile .row .col-sm-12 .group-address .group-contact {
+  margin-top: 10px;
 }
 .user-profile .row .col-sm-4 .field-name-field-area-of-expertise,
 .user-profile .row .col-sm-8 .field-name-field-area-of-expertise,
@@ -10078,6 +10098,11 @@ form#user-login,
 .user-profile .row .col-sm-12 .field-name-field-area-of-expertise .field-item {
   display: block;
 }
+.user-profile .row .col-sm-4 .field-name-field-area-of-expertise .field-label,
+.user-profile .row .col-sm-8 .field-name-field-area-of-expertise .field-label,
+.user-profile .row .col-sm-12 .field-name-field-area-of-expertise .field-label {
+  color: #999999;
+}
 .user-profile .row .col-sm-4 .field-name-field-plz,
 .user-profile .row .col-sm-8 .field-name-field-plz,
 .user-profile .row .col-sm-12 .field-name-field-plz {
@@ -10092,7 +10117,7 @@ form#user-login,
 .user-profile .row .col-sm-4 .field-name-field-website .field-item a,
 .user-profile .row .col-sm-8 .field-name-field-website .field-item a,
 .user-profile .row .col-sm-12 .field-name-field-website .field-item a {
-  color: #fff;
+  color: #dddddd;
   text-decoration: none;
 }
 .user-profile .row .col-sm-4 .field-name-field-website .field-item a:hover,
@@ -10104,6 +10129,11 @@ form#user-login,
 .user-profile .row .col-sm-4 .field-name-field-image,
 .user-profile .row .col-sm-8 .field-name-field-image,
 .user-profile .row .col-sm-12 .field-name-field-image {
+  margin-bottom: 25px;
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description,
+.user-profile .row .col-sm-8 .field-name-field-short-description,
+.user-profile .row .col-sm-12 .field-name-field-short-description {
   margin-bottom: 25px;
 }
 .user-profile .row .col-sm-4 .field-name-field-short-description .field-item h1,
@@ -10408,10 +10438,14 @@ form#user-profile-form div .form-wrapper {
 }
 form#user-profile-form div .form-wrapper .form-item label.control-label {
   display: block;
+  padding-left: 8px;
   font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.03em;
 }
 form#user-profile-form div .form-wrapper .form-item input.form-control {
   margin: 0;
+  padding: 8px;
   height: 36px;
   font-family: 'HelveticaBQMedium';
   font-size: 16px;
@@ -10437,17 +10471,20 @@ form#user-profile-form div .form-wrapper .form-item input.form-control::-webkit-
   color: #808080;
 }
 form#user-profile-form div .form-wrapper .form-item input.form-control:focus {
-  -webkit-box-shadow: 0 0 2px rgba(100, 100, 100, 0.75) inset;
-  -moz-box-shadow: 0 0 2px rgba(100, 100, 100, 0.75) inset;
-  box-shadow: 0 0 2px rgba(100, 100, 100, 0.75) inset;
-  border: 2px solid #333333;
+  padding: 7px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  border: 1px solid #66afe9;
 }
-form#user-profile-form div .form-wrapper .form-item .help-block {
-  font-family: 'HelveticaBQMedium';
+form#user-profile-form div .form-wrapper .form-item .help-block,
+form#user-profile-form div .form-wrapper .form-item .focal-point-help {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   color: #808080;
+  letter-spacing: 0.02em;
 }
 form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper textarea {
+  padding: 8px;
   border: none;
   border-bottom: 2px solid #333333;
   -moz-border-radius: 0;
@@ -10457,6 +10494,7 @@ form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper texta
   -moz-box-shadow: none;
   box-shadow: none;
   background-color: #ffffff;
+  color: #333333;
 }
 form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper textarea::-moz-placeholder {
   color: #808080;
@@ -10469,13 +10507,16 @@ form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper texta
   color: #808080;
 }
 form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper textarea:focus {
-  -webkit-box-shadow: 0 0 2px rgba(100, 100, 100, 0.75) inset;
-  -moz-box-shadow: 0 0 2px rgba(100, 100, 100, 0.75) inset;
-  box-shadow: 0 0 2px rgba(100, 100, 100, 0.75) inset;
-  border: 2px solid #333333;
+  padding: 7px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  border: 1px solid #66afe9;
 }
 form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper .grippie {
   display: none;
+}
+form#user-profile-form div .form-wrapper .form-item .form-select {
+  color: #333333;
 }
 form#user-profile-form div .form-wrapper .form-item .form-radios,
 form#user-profile-form div .form-wrapper .form-item .form-checkboxes {
@@ -10548,11 +10589,11 @@ form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-wi
 form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .input-group .input-group-btn button.form-submit {
   display: inline-block;
   margin: 0;
-  padding: 10px 20px;
+  padding: 12px 20px 10px;
   font-family: 'HelveticaBQMedium';
   font-size: 20px;
   line-height: 1;
-  letter-spacing: 0;
+  letter-spacing: 0.03em;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 0;
@@ -10593,14 +10634,17 @@ form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-wi
 form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .form-group span.file a {
   vertical-align: middle;
 }
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data .form-type-textfield {
+  margin-bottom: 0;
+}
 form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data button.form-submit {
   display: inline-block;
   margin: 0;
-  padding: 10px 20px;
+  padding: 12px 20px 10px;
   font-family: 'HelveticaBQMedium';
   font-size: 20px;
   line-height: 1;
-  letter-spacing: 0;
+  letter-spacing: 0.03em;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 0;
@@ -10626,6 +10670,9 @@ form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-wi
     font-size: 16px;
   }
 }
+form#user-profile-form div .form-wrapper .form-item .form-managed-file .image-widget-data button.form-submit.btn-danger {
+  background-color: #e1001a;
+}
 form#user-profile-form div .form-actions {
   text-align: left;
   margin-left: 0;
@@ -10634,11 +10681,11 @@ form#user-profile-form div .form-actions {
 form#user-profile-form div .form-actions .form-submit {
   display: inline-block;
   margin: 0;
-  padding: 10px 20px;
+  padding: 12px 20px 10px;
   font-family: 'HelveticaBQMedium';
-  font-size: 28px;
+  font-size: 22px;
   line-height: 1;
-  letter-spacing: 0;
+  letter-spacing: 0.03em;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 0;
@@ -13079,4 +13126,10 @@ footer.container-fluid {
   margin-top: 150px;
   padding-bottom: 50px;
   border: none;
+}
+@media screen and (min-width: 64em) {
+  footer.container,
+  footer.container-fluid {
+    padding-left: 35px;
+  }
 }
