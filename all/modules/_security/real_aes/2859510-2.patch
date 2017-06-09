@@ -1,0 +1,24 @@
+diff --git a/aes/aes.module b/aes/aes.module
+index 5a2d1a9..53a2675 100644
+--- a/aes/aes.module
++++ b/aes/aes.module
+@@ -30,6 +30,8 @@ if (!function_exists('aes_encrypt')) {
+    * @return string
+    *   The ciphertext.
+    *
++   * @throws Exception
++   *   Thrown when the encryption library is not available.
+    * @throws \Defuse\Crypto\Exception\CannotPerformOperation
+    *   Thrown when an essential operation cannot be performed (eg key too small).
+    */
+@@ -40,8 +42,8 @@ if (!function_exists('aes_encrypt')) {
+     $library = libraries_load('php-encryption');
+ 
+     if (empty($library['loaded'])) {
+-      // Throw a filtered exception.
+-      throw new Ex\CannotPerformOperation('PHP-encryption library is not available.');
++      // Throw an exception.
++      throw new Exception('PHP-encryption library is not available.');
+     }
+ 
+     if ($custom_cipher || $custom_implementation) {
