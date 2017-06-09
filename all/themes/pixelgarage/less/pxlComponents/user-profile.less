@@ -5,7 +5,7 @@
 // Variables
 // -------------------------
 @pxl-text-inverted: #ddd;
-@paragraph-offset: 10px;
+@paragraph-offset: 12.5px;
 
 
 // Mixins
@@ -15,6 +15,9 @@
 
 // General settings
 // -------------------------
+
+
+// User Profile in Member List
 .user-profile {
   letter-spacing: 0.06em;
 
@@ -142,6 +145,71 @@
 
     .col-sm-4 {
       padding-left: 7.5px;
+    }
+  }
+}
+
+// User Profile standalone
+body.page-user {
+  .main-container {
+    .container-fluid {
+      padding: 40px 10px 60px;
+      max-width: @container-desktop;
+      .row {
+        margin: 0 -@grid-gutter-width/2;
+        padding: 0 @grid-gutter-width/2;
+
+        @media @collapse-break {
+          margin: 0 -@grid-gutter-width;
+          padding: 0 @grid-gutter-width;
+        }
+
+        .col-sm-12 {
+
+          .page-header {
+            .paragraph-title();
+            margin: 0 -@grid-gutter-width/4;
+            border: none;
+            line-height: 0.95;
+
+            @media @collapse-break {
+              margin: 0 -@grid-gutter-width 30px;
+              line-height: 0.95;
+            }
+          }
+
+          .region-content {
+            .user-profile {
+              letter-spacing: @text-spacing;
+
+              .row {
+                //margin: 0;
+                padding: 0;
+
+                .col-sm-4, .col-sm-8, .col-sm-12 {
+                  font-family: @pxl-text-font;
+                  color: @text-color;
+
+                  a {
+                    color: @text-color;
+                    &:hover {
+                      @media @normal {
+                        color: @pxl-color-red;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            // Password reset page
+            form#user-pass-reset {
+              .btn {
+                .resp-submit-button();
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

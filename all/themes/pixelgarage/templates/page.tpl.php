@@ -116,8 +116,6 @@
 </header>
 
 <div class="main-container">
-  <div class="fading fading-top"></div>
-  <div class="fading fading-bottom"></div>
   <div class="<?php print $container_class; ?>">
     <header role="banner" id="page-header">
       <?php if (!empty($site_slogan)): ?>

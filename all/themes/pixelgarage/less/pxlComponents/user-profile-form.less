@@ -10,6 +10,8 @@
 @form-max-width: @paragraph-max-width;
 @bg-color-form-active: #f8f8f8;
 @padding-form-input: 8px;
+@line-weight: 1px;
+@form-hover-bg-color: #f2f2f2;
 
 
 // Mixins
@@ -39,12 +41,26 @@
 
 // General settings
 // -------------------------
+
+form {
+  .help-block, .focal-point-help {
+    font-family: @font-family-sans-serif;
+    font-size: 11px;
+    color: @pxl-color-gray;
+    letter-spacing: @text-spacing;
+  }
+
+  .form-type-password {
+    padding-left: 0;
+  }
+}
+
 form#user-profile-form {
   margin: 0 auto @panel-separator-height;
   max-width: @form-max-width;
 
   @media @normal {
-    width: 50%;
+    width: 70%;
   }
 
   div {
@@ -110,50 +126,72 @@ form#user-profile-form {
           font-family: @pxl-text-font;
           font-size: @font-size-base;
           color: @text-color;
-          border: none;
-          border-bottom: 2px solid @text-color;
+          //border: none;
+          border: @line-weight solid transparent;
+          border-bottom: @line-weight solid @text-color;
           #pxl-mixins.border-radius(0);
           #pxl-mixins.box-shadow(none);
           background-color: @fieldset-bg-color;
           .placeholder(@text-color-placeholder);
+          #pxl-mixins.transition(color 100ms ease-in-out);
+          #pxl-mixins.transition(background-color 100ms ease-in-out);
 
+          &:hover {
+            color: @pxl-color-gray;
+            border-bottom-color: @pxl-color-gray;
+            background-color: @form-hover-bg-color;
+          }
           &:focus {
             //#pxl-mixins.box-shadow(0 0 2px rgba(100, 100, 100, 0.75) inset);
-            //border-radius: 4px;
+            border-radius: 3px;
             //background-color: @bg-color-form-active;
-            padding: (@padding-form-input)-1;
+            //padding-left: -20px; //: 5px 7px 8px;
             -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,0.6);
             box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,0.6);
             border: 1px solid #66afe9;
+            background-color: white;
+            color: @text-color;
           }
-        }
 
-        .help-block, .focal-point-help {
-          font-family: @font-family-sans-serif;
-          font-size: 11px;
-          color: @pxl-color-gray;
-          letter-spacing: 0.02em;
+          &.form-file {
+            margin: 0;
+            padding: 0;
+          }
         }
 
         .form-textarea-wrapper {
           textarea {
+            margin: 0;
             padding: @padding-form-input;
-            border: none;
-            border-top: 2px solid @text-color;
-            border-bottom: 2px solid @text-color;
+            font-family: @pxl-text-font;
+            font-size: @font-size-base;
+            color: @text-color;
+            //border: none;
+            border: @line-weight solid transparent;
+            border-top: @line-weight solid @text-color;
+            border-bottom: @line-weight solid @text-color;
             #pxl-mixins.border-radius(0);
             #pxl-mixins.box-shadow(none);
             background-color: @fieldset-bg-color;
             .placeholder(@text-color-placeholder);
-            color: @text-color;
+            #pxl-mixins.transition(color 100ms ease-in-out);
+            #pxl-mixins.transition(background-color 100ms ease-in-out);
 
+            &:hover {
+              color: @pxl-color-gray;
+              border-top-color: @pxl-color-gray;
+              border-bottom-color: @pxl-color-gray;
+
+            }
             &:focus {
-              //#pxl-mixins.box-shadow(0 0 2px rgba(100, 100, 100, 0.75) inset);
-              //border: 2px solid @text-color;
-              padding: (@padding-form-input)-1;
+              border-radius: 3px;
+              //background-color: @bg-color-form-active;
+              //padding: 5px 7px 8px;
               -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,0.6);
               box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,0.6);
               border: 1px solid #66afe9;
+              background-color: white;
+              color: @text-color;
             }
           }
 
@@ -205,10 +243,10 @@ form#user-profile-form {
               input {
                 display: inline-block;
                 float: none;
-                margin: 0 -2px;
+                margin: 0;
                 padding: 0;
                 width: 100%;
-                border-bottom: 1px solid @text-color;
+                border-bottom: @line-weight solid @text-color;
                 #pxl-mixins.border-radius(0);
                 #pxl-mixins.box-shadow(none);
                 background-color: @fieldset-bg-color;
@@ -222,7 +260,7 @@ form#user-profile-form {
                 top: 0;
                 right: 0;
                 bottom: 0;
-                margin: 0 -2px;
+                margin: 0;
                 width: auto;
                 z-index: 10;
 
@@ -294,5 +332,4 @@ form#user-profile-form {
 
     }
   }
-
 }

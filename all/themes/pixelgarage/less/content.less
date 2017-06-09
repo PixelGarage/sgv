@@ -18,7 +18,7 @@
 .container, .container-fluid {
   // all container with background
   padding: 10px @grid-gutter-width / 2;
-  max-width: @container-large-desktop;
+  //max-width: @container-large-desktop;
   background-color: #fff;
 
   @media @collapse-break {
@@ -57,11 +57,11 @@ html {
 
   // Text Selection Style
   ::selection {
-    background-color: lighten(@pxl-color-red, 40%);
+    background-color: lighten(@pxl-color-red, 30%);
   }
   /* Firefox */
   ::-moz-selection {
-    background-color: lighten(@pxl-color-red, 40%);
+    background-color: lighten(@pxl-color-red, 30%);
   }
 
 }
@@ -123,10 +123,10 @@ body {
             }
 
             &:hover {
-              color: @text-color;
+              color: @pxl-color-red;
             }
             &.active {
-              color: @pxl-color-red;
+              //color: @pxl-color-red;
             }
           }
         }
@@ -170,14 +170,46 @@ body {
           //
           // Admin tabs and action links
           ul.nav-tabs {
-            margin: 20px 0 5px;
+            border-bottom: @line-weight solid @gray-lighter;
+
+            @media @normal {
+              margin: 20px 0 36px -26px;
+            }
+
+
             li {
               float: right;
+              margin-bottom: 0;
               a {
-                padding: 5px 10px;
-                font-family: @font-family-monospace;
-                font-size: @font-size-small;
+                padding: 10px 15px;
+                //font-family: @font-family-monospace;
+                //font-size: @font-size-small;
                 border-radius: 0;
+                border: none;
+                #pxl-mixins.transition(background-color 100ms ease-in-out);
+                color: @gray-light;
+
+                &:hover, &:focus, &:active {
+                  color: @pxl-color-red;
+                  background-color: transparent;
+                  //border-bottom-color: @text-color;
+                }
+              }
+              &.active {
+                a {
+                  //border: @line-weight solid @text-color;
+                  //border-bottom-color: white;
+                  color: @text-color;
+                  background-color: transparent;
+                  //border-bottom-color: @text-color;
+
+                  &:hover {
+                    color: @pxl-color-red;
+                    background-color: transparent;
+                    //border-bottom-color: white;
+                  }
+                }
+
               }
             }
           }
