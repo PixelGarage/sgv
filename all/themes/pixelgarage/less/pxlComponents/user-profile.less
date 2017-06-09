@@ -5,6 +5,7 @@
 // Variables
 // -------------------------
 @pxl-text-inverted: #ddd;
+@paragraph-offset: 10px;
 
 
 // Mixins
@@ -37,13 +38,14 @@
         }
 
         .group-adresse, .group-contact {
-          margin-top: 10px;
+          padding-top: @paragraph-offset;
 
           @media @normal {
             //margin-bottom: 60px;
           }
         }
       }
+
 
       .field-name-field-area-of-expertise {
         margin-bottom: 25px;
@@ -56,7 +58,8 @@
           display: block;
         }
         .field-label {
-          color: @gray;
+        padding-bottom: @paragraph-offset;
+
         }
       }
 
@@ -72,7 +75,8 @@
         }
       }
 
-      .field-name-field-plz {
+      // Zwei Felder auf einer Zeile darstellen
+      .field-name-field-first-name, .field-name-field-plz {
         display: inline-block;
         margin-right: 0.3em;
 
@@ -81,14 +85,14 @@
         }
       }
 
-      .field-name-field-location {
+      .field-name-field-last-name, .field-name-field-location {
         display: inline-block;
         .field-item {
 
         }
       }
 
-      .field-name-field-website {
+      .field-name-field-e-mail {
         .field-item {
           a {
             color: @pxl-text-inverted;
@@ -98,7 +102,19 @@
               color: @pxl-color-main;
               text-decoration: none;
             }
+          }
+        }
 
+      }.field-name-field-website {
+        .field-item {
+          a {
+            color: @pxl-text-inverted;
+            text-decoration: none;
+
+            &:hover {
+              color: @pxl-color-main;
+              text-decoration: none;
+            }
           }
         }
       }

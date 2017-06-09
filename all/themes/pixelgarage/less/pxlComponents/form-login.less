@@ -25,13 +25,14 @@
   #pxl-mixins.border-radius(0);
   color: white;
   background: @pxl-login-btn-color;
-  //#pxl-mixins.border-radius(0.25em);
-  //#gradient.vertical(@pxl-login-gradient-2-top, @pxl-login-gradient-2-bottom);
+  #pxl-mixins.font-size-responsive(@font-size-base);
+  letter-spacing: 0.05em;
+  #pxl-mixins.transition(opacity 100ms ease-in-out);
 
   &:hover {
     color: @pxl-login-btn-hover-color;
-    //#gradient.vertical(@pxl-login-gradient-2-bottom, @pxl-login-gradient-2-top);
     text-decoration: none;
+    opacity: 0.6;
   }
 }
 

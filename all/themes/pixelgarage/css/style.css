@@ -9931,15 +9931,31 @@ form#user-login,
   border-radius: 0;
   color: white;
   background: #333333;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  -webkit-transition: opacity 100ms ease-in-out;
+  -o-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
   display: inline-block;
   position: absolute;
   right: 0;
   vertical-align: middle;
   margin: 0;
 }
+@media screen and (min-width: 45em) {
+  #user-create-account .login-register {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  #user-create-account .login-register {
+    font-size: 16px;
+  }
+}
 #user-create-account .login-register:hover {
   color: #ffffff;
   text-decoration: none;
+  opacity: 0.6;
 }
 /* user login form */
 #user_login_form {
@@ -9976,10 +9992,26 @@ form#user-login,
   border-radius: 0;
   color: white;
   background: #333333;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  -webkit-transition: opacity 100ms ease-in-out;
+  -o-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
+}
+@media screen and (min-width: 45em) {
+  #user_login_form .form-actions-wrapper .form-actions .btn {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  #user_login_form .form-actions-wrapper .form-actions .btn {
+    font-size: 16px;
+  }
 }
 #user_login_form .form-actions-wrapper .form-actions .btn:hover {
   color: #ffffff;
   text-decoration: none;
+  opacity: 0.6;
 }
 #user_login_form .form-actions-wrapper .login-password {
   display: inline-block;
@@ -10035,12 +10067,30 @@ form#user-login,
   border-radius: 0;
   color: white;
   background: #333333;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  -webkit-transition: opacity 100ms ease-in-out;
+  -o-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
   float: right;
+}
+@media screen and (min-width: 45em) {
+  #user-register-form .form-actions .btn,
+  #user-pass .form-actions .btn {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  #user-register-form .form-actions .btn,
+  #user-pass .form-actions .btn {
+    font-size: 16px;
+  }
 }
 #user-register-form .form-actions .btn:hover,
 #user-pass .form-actions .btn:hover {
   color: #ffffff;
   text-decoration: none;
+  opacity: 0.6;
 }
 /*
  *  User profile component
@@ -10079,7 +10129,7 @@ form#user-login,
 .user-profile .row .col-sm-4 .group-address .group-contact,
 .user-profile .row .col-sm-8 .group-address .group-contact,
 .user-profile .row .col-sm-12 .group-address .group-contact {
-  margin-top: 10px;
+  padding-top: 10px;
 }
 .user-profile .row .col-sm-4 .field-name-field-area-of-expertise,
 .user-profile .row .col-sm-8 .field-name-field-area-of-expertise,
@@ -10101,18 +10151,36 @@ form#user-login,
 .user-profile .row .col-sm-4 .field-name-field-area-of-expertise .field-label,
 .user-profile .row .col-sm-8 .field-name-field-area-of-expertise .field-label,
 .user-profile .row .col-sm-12 .field-name-field-area-of-expertise .field-label {
-  color: #999999;
+  padding-bottom: 10px;
 }
+.user-profile .row .col-sm-4 .field-name-field-first-name,
+.user-profile .row .col-sm-8 .field-name-field-first-name,
+.user-profile .row .col-sm-12 .field-name-field-first-name,
 .user-profile .row .col-sm-4 .field-name-field-plz,
 .user-profile .row .col-sm-8 .field-name-field-plz,
 .user-profile .row .col-sm-12 .field-name-field-plz {
   display: inline-block;
   margin-right: 0.3em;
 }
+.user-profile .row .col-sm-4 .field-name-field-last-name,
+.user-profile .row .col-sm-8 .field-name-field-last-name,
+.user-profile .row .col-sm-12 .field-name-field-last-name,
 .user-profile .row .col-sm-4 .field-name-field-location,
 .user-profile .row .col-sm-8 .field-name-field-location,
 .user-profile .row .col-sm-12 .field-name-field-location {
   display: inline-block;
+}
+.user-profile .row .col-sm-4 .field-name-field-e-mail .field-item a,
+.user-profile .row .col-sm-8 .field-name-field-e-mail .field-item a,
+.user-profile .row .col-sm-12 .field-name-field-e-mail .field-item a {
+  color: #dddddd;
+  text-decoration: none;
+}
+.user-profile .row .col-sm-4 .field-name-field-e-mail .field-item a:hover,
+.user-profile .row .col-sm-8 .field-name-field-e-mail .field-item a:hover,
+.user-profile .row .col-sm-12 .field-name-field-e-mail .field-item a:hover {
+  color: #e1001a;
+  text-decoration: none;
 }
 .user-profile .row .col-sm-4 .field-name-field-website .field-item a,
 .user-profile .row .col-sm-8 .field-name-field-website .field-item a,
@@ -10486,6 +10554,7 @@ form#user-profile-form div .form-wrapper .form-item .focal-point-help {
 form#user-profile-form div .form-wrapper .form-item .form-textarea-wrapper textarea {
   padding: 8px;
   border: none;
+  border-top: 2px solid #333333;
   border-bottom: 2px solid #333333;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
