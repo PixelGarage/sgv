@@ -30,7 +30,7 @@ if (!empty($paragraphs_item->field_anchor_menu_title)) {
   $attributes .= ' data-anchor-title="' . $anchor_title . '"';
 }
 ?>
-<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div class="<?php print $classes; ?>" <?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
     <?php print render($content); ?>
   </div>
