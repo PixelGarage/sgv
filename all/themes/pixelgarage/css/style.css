@@ -13067,11 +13067,12 @@ html ::-moz-selection {
 }
 body {
   position: relative;
-  height: 100%;
-  min-height: 320px;
+  min-height: 100%;
 }
 body .main-container {
   position: relative;
+  padding-bottom: 180px;
+  height: 100%;
 }
 body .main-container .menu-anchor-container {
   position: absolute;
@@ -13183,6 +13184,16 @@ body .main-container .container .row section ul.action-links li a,
 body .main-container .container-fluid .row section ul.action-links li a {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 14px;
+}
+body footer.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px 30px 50px;
+  height: 180px;
+  border: none;
 }
 /*
  *  Content section (main content)
