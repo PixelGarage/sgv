@@ -18,19 +18,19 @@
  */
 switch ($title) {
   case 'Dokumente für Lehrpersonen und Auszubildende':
-    $anchor_title = t('- Lehrpersonen');
+    $anchor_title = t('Lehrpersonen');
     break;
   case 'Portfolio':
-    $anchor_title = t('- Portfolio');
+    $anchor_title = t('Portfolio');
     break;
   case 'Überbetriebliche Kurse':
-    $anchor_title = t('- Überbetr. Kurse');
+    $anchor_title = t('Überbetr. Kurse');
     break;
   case 'Fakultative Planungshilfe für Berufsfachschulen':
-    $anchor_title = t('- Planungshilfen');
+    $anchor_title = t('Planungshilfen');
     break;
   default:
-    $anchor_title = t('- PDF Dokumente');
+    $anchor_title = t('PDF Dokumente');
     break;
 }
 ?>

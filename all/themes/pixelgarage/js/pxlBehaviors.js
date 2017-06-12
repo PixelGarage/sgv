@@ -105,7 +105,7 @@
             paragraphItemsTop.push($item.offset().top - 200);
 
             // append anchor menu item
-            $anchorMenu.append('<li class="leaf"><a href="#' + anchor + '">' + anchorTitle + '</a></li>');
+            $anchorMenu.append('<li class="leaf sub-leaf"><a href="#' + anchor + '">' + anchorTitle + '</a></li>');
             $anchorMenuCont.show();
           }
         });

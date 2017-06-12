@@ -94,7 +94,8 @@ body {
         .transform-origin(top right);
         #pxl-mixins.transform(translateX(-100%) rotate(-90deg));
       }
-
+      // Unterkategorien manuell anpassen unter:
+      // sites/all/themes/pixelgarage/templates/views-view-grouping--documents.tpl.php
       ul.menu-anchor {
         display: block;
         #pxl-mixins.no-list-style();
@@ -128,7 +129,14 @@ body {
               color: @pxl-color-red;
             }
             &.active {
-              //color: @pxl-color-red;
+              color: @pxl-color-red;
+            }
+          }
+          &.sub-leaf {
+
+            &:before {
+              padding-right: 5px;
+              content: '—';
             }
           }
         }
