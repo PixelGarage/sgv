@@ -56,6 +56,7 @@
       // add anchor menu container
       var $mainContainer = $('.main-container'),
         $paragraphItems = $('#block-system-main').find('.entity-paragraphs-item'),
+        $documentItems = $('#block-views-documents-block').find('.view-grouping'),
         paragraphItemsTop = new Array(),
         $activeAnchorMenuItem = null;
 
@@ -77,6 +78,23 @@
         $paragraphItems.each(function(index) {
           var $item = $(this),
             anchor = 'paragraph-item-' + index,
+            anchorTitle = $item.attr('data-anchor-title') ? $item.attr('data-anchor-title') : false;
+
+          //
+          // create anchor menu item for paragraph
+          if (anchorTitle) {
+            // add anchor (id) to paragraph and store top position of it
+            $item.attr('id', anchor);
+            paragraphItemsTop.push($item.offset().top - 200);
+
+            // append anchor menu item
+            $anchorMenu.append('<li class="leaf"><a href="#' + anchor + '">' + anchorTitle + '</a></li>');
+            $anchorMenuCont.show();
+          }
+        });
+        $documentItems.each(function(index) {
+          var $item = $(this),
+            anchor = 'document-item-' + index,
             anchorTitle = $item.attr('data-anchor-title') ? $item.attr('data-anchor-title') : false;
 
           //
@@ -116,10 +134,10 @@
 
             //
             // highlight anchor menu according to scroll position
+            var $anchorMenuItems = $anchorMenu.find('li.leaf a');
             $.each( paragraphItemsTop, function( index, paragraphTopPosition ) {
               if (scrollPos > paragraphTopPosition) {
-                var $anchorMenuItems = $anchorMenu.find('li.leaf a'),
-                  $anchorMenuItem = $($anchorMenuItems[index]);
+                var $anchorMenuItem = $($anchorMenuItems[index]);
 
                 if ($activeAnchorMenuItem) {
                   $activeAnchorMenuItem.removeClass('active');

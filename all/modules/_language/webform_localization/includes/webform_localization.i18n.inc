@@ -296,7 +296,19 @@ function webform_localization_update_translation_strings($properties) {
   $options = array('update' => TRUE, 'translate' => FALSE);
   if (!empty($properties['confirmation']['value'])) {
     $name = webform_localization_i18n_string_name($properties['nid'], 'confirmation');
-    i18n_string($name, $properties['confirmation']['value'], $options + array('format' => $properties['confirmation']['format']));
+    $confirmationOptions = $options + array('format' => I18N_STRING_FILTER_XSS);
+    if (isset($properties['confirmation']['format'])) {
+      if (i18n_string_allowed_format($properties['confirmation']['format'])) {
+        $confirmationOptions['format'] = $properties['confirmation']['format'];
+      }
+      else {
+        drupal_set_message(t('The string @name could not be refreshed with the text format @format because it is not allowed for translation.', array(
+          '@name' => $name,
+          '@format' => $properties['confirmation']['format']
+        )), 'warning', FALSE);
+      }
+    }
+    i18n_string($name, $properties['confirmation']['value'], $confirmationOptions);
   }
   if (!empty($properties['submit_text'])) {
     $name = webform_localization_i18n_string_name($properties['nid'], 'submit_text');
@@ -323,8 +335,21 @@ function webform_localization_translate_strings(&$node, $update = FALSE) {
     $node->webform['nid'] = $node->nid;
   }
   $name = webform_localization_i18n_string_name($node->webform['nid'], 'confirmation');
+  $confirmationOptions = $options + array('format' => I18N_STRING_FILTER_XSS);
+  if (isset($node->webform['confirmation_format'])) {
+    if (i18n_string_allowed_format($node->webform['confirmation_format'])) {
+      $confirmationOptions['format'] = $node->webform['confirmation_format'];
+    }
+    else {
+      drupal_set_message(t('The string @name could not be refreshed with the text format @format because it is not allowed for translation.', array(
+        '@name' => $name,
+        '@format' => $node->webform['confirmation_format']
+      )), 'warning', FALSE);
+    }
+  }
   $node->webform['confirmation'] = i18n_string(
-      $name, $node->webform['confirmation'], $options + array('format' => I18N_STRING_FILTER_XSS));
+      $name, $node->webform['confirmation'], $confirmationOptions);
+
   $name = webform_localization_i18n_string_name($node->webform['nid'], 'submit_text');
   $node->webform['submit_text'] = i18n_string(
       $name, $node->webform['submit_text'], $options);
