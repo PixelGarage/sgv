@@ -9708,8 +9708,10 @@ table.template-course tbody tr td:last-child {
   -o-transition: opacity 300ms ease;
   transition: opacity 300ms ease;
 }
-.node.node-article.view-mode-teaser .row div.col-sm-12:hover {
-  opacity: 0.6;
+@media screen and (min-width: 64em) {
+  .node.node-article.view-mode-teaser .row div.col-sm-12:hover {
+    opacity: 0.6;
+  }
 }
 .node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
   margin: 20px 0 10px;
@@ -10154,10 +10156,29 @@ form#user-login .form-control:focus,
   padding-left: 7.5px;
   padding-right: 7.5px;
 }
+.user-profile .row .col-sm-4 a,
+.user-profile .row .col-sm-8 a,
+.user-profile .row .col-sm-12 a {
+  color: #dddddd;
+  text-decoration: none;
+}
+.user-profile .row .col-sm-4 a:hover,
+.user-profile .row .col-sm-8 a:hover,
+.user-profile .row .col-sm-12 a:hover {
+  color: #e1001a;
+  text-decoration: none;
+}
 .user-profile .row .col-sm-4 .field-name-ds-user-picture,
 .user-profile .row .col-sm-8 .field-name-ds-user-picture,
 .user-profile .row .col-sm-12 .field-name-ds-user-picture {
   margin-bottom: 25px;
+}
+@media screen and (min-width: 48em) {
+  .user-profile .row .col-sm-4 .field-name-ds-user-picture,
+  .user-profile .row .col-sm-8 .field-name-ds-user-picture,
+  .user-profile .row .col-sm-12 .field-name-ds-user-picture {
+    max-width: 250px;
+  }
 }
 .user-profile .row .col-sm-4 .group-address,
 .user-profile .row .col-sm-8 .group-address,
@@ -10171,12 +10192,9 @@ form#user-login .form-control:focus,
     margin-bottom: 60px;
   }
 }
-.user-profile .row .col-sm-4 .group-address .group-adresse,
-.user-profile .row .col-sm-8 .group-address .group-adresse,
-.user-profile .row .col-sm-12 .group-address .group-adresse,
-.user-profile .row .col-sm-4 .group-address .group-contact,
-.user-profile .row .col-sm-8 .group-address .group-contact,
-.user-profile .row .col-sm-12 .group-address .group-contact {
+.user-profile .row .col-sm-4 .group-address .field-group-div,
+.user-profile .row .col-sm-8 .group-address .field-group-div,
+.user-profile .row .col-sm-12 .group-address .field-group-div {
   padding-top: 12.5px;
 }
 .user-profile .row .col-sm-4 .field-name-field-area-of-expertise,
@@ -10239,6 +10257,18 @@ form#user-login .form-control:focus,
 .user-profile .row .col-sm-4 .field-name-field-website .field-item a:hover,
 .user-profile .row .col-sm-8 .field-name-field-website .field-item a:hover,
 .user-profile .row .col-sm-12 .field-name-field-website .field-item a:hover {
+  color: #e1001a;
+  text-decoration: none;
+}
+.user-profile .row .col-sm-4 .field-name-field-phone .field-item a,
+.user-profile .row .col-sm-8 .field-name-field-phone .field-item a,
+.user-profile .row .col-sm-12 .field-name-field-phone .field-item a {
+  color: #dddddd;
+  text-decoration: none;
+}
+.user-profile .row .col-sm-4 .field-name-field-phone .field-item a:hover,
+.user-profile .row .col-sm-8 .field-name-field-phone .field-item a:hover,
+.user-profile .row .col-sm-12 .field-name-field-phone .field-item a:hover {
   color: #e1001a;
   text-decoration: none;
 }
@@ -10595,6 +10625,7 @@ body.page-user .main-container .container-fluid .row .col-sm-12 .region-content 
  * --------------------------------------------------*/
 form .help-block,
 form .focal-point-help {
+  padding-left: 9px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   color: #808080;
@@ -10666,7 +10697,7 @@ form#user-profile-form div .form-wrapper {
 }
 form#user-profile-form div .form-wrapper .form-item label.control-label {
   display: block;
-  padding-left: 8px;
+  padding-left: 9px;
   font-weight: normal;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.03em;
@@ -10963,6 +10994,12 @@ form#user-profile-form div .form-actions .form-submit .icon {
   letter-spacing: 0.02em;
   line-height: 0.95;
   font-size: 37px;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
 }
 @media screen and (min-width: 21.658536585365855em) {
   .entity-paragraphs-item.paragraphs-item-page-intro .content .field-name-field-text .field-item p {
@@ -10972,6 +11009,16 @@ form#user-profile-form div .form-actions .form-submit .icon {
 @media screen and (min-width: 48em) {
   .entity-paragraphs-item.paragraphs-item-page-intro .content .field-name-field-text .field-item p {
     font-size: 82px;
+  }
+}
+@media screen and (min-width: 48em) {
+  .entity-paragraphs-item.paragraphs-item-page-intro .content .field-name-field-text .field-item p {
+    word-break: break-word;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -o-hyphens: none;
+    hyphens: none;
   }
 }
 /*
@@ -13232,6 +13279,7 @@ header#navbar .container-fluid .navbar-collapse nav .region-navigation {
 .container a:focus,
 .container-fluid a:focus {
   outline: none;
+  text-decoration: none;
 }
 .container .field-label,
 .container-fluid .field-label,

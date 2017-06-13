@@ -28,8 +28,22 @@
       padding-left: 7.5px;
       padding-right: 7.5px;
 
+      a {
+        color: @pxl-text-inverted;
+        text-decoration: none;
+
+        &:hover {
+          color: @pxl-color-main;
+          text-decoration: none;
+        }
+      }
+
       .field-name-ds-user-picture {
         margin-bottom: 25px;
+
+        @media @tablet {
+          max-width: 250px;
+        }
       }
 
       .group-address {
@@ -40,7 +54,7 @@
 
         }
 
-        .group-adresse, .group-contact {
+        .field-group-div {
           padding-top: @paragraph-offset;
 
           @media @normal {
@@ -124,7 +138,15 @@
 
       .field-name-field-phone {
         .field-item {
+          a {
+            color: @pxl-text-inverted;
+            text-decoration: none;
 
+            &:hover {
+              color: @pxl-color-main;
+              text-decoration: none;
+            }
+          }
         }
       }
 

@@ -24,7 +24,11 @@
           letter-spacing: 0.02em;
           line-height: 0.95;
           #pxl-mixins.font-size-responsive(82px, 37px);
-          //#pxl-mixins.hyphenate;
+          #pxl-mixins.hyphenate();
+
+          @media @tablet {
+            #pxl-mixins.hyphenate(none);
+          }
         }
       }
     }
