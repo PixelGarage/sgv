@@ -10153,8 +10153,16 @@ form#user-login .form-control:focus,
 .user-profile .row .col-sm-12 {
   font-family: 'HelveticaBQMedium';
   color: #dddddd;
-  padding-left: 7.5px;
-  padding-right: 7.5px;
+  padding-left: 0;
+  padding-right: 0;
+}
+@media screen and (min-width: 48em) {
+  .user-profile .row .col-sm-4,
+  .user-profile .row .col-sm-8,
+  .user-profile .row .col-sm-12 {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
 }
 .user-profile .row .col-sm-4 a,
 .user-profile .row .col-sm-8 a,
@@ -10515,11 +10523,7 @@ form#user-login .form-control:focus,
   height: auto;
   min-height: 350px;
 }
-.user-profile .row .col-sm-4 {
-  padding-left: 7.5px;
-}
 body.page-user .main-container .container-fluid {
-  padding: 40px 10px 60px;
   max-width: 970px;
 }
 body.page-user .main-container .container-fluid .row {
@@ -10983,6 +10987,18 @@ form#user-profile-form div .form-actions .form-submit .icon {
   display: none;
 }
 /*
+ *  Text paragraph component
+ * --------------------------------------------------*/
+.entity-paragraphs-item {
+  max-width: 960px;
+  margin: 0 auto 20px;
+}
+.entity-paragraphs-item .content .field-name-field-text .field-items .field-item p img {
+  display: block;
+  float: none;
+  margin-left: 0;
+}
+/*
  *  Page intro paragraph component
  * --------------------------------------------------*/
 .entity-paragraphs-item.paragraphs-item-page-intro {
@@ -11191,6 +11207,11 @@ form#user-profile-form div .form-actions .form-submit .icon {
   max-width: 100%;
   height: auto;
   min-height: 350px;
+}
+@media screen and (min-width: 48em) {
+  .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item {
+    padding-right: 230px;
+  }
 }
 /*
  *  Text paragraph component
@@ -11410,6 +11431,9 @@ form#user-profile-form div .form-actions .form-submit .icon {
 /*
  *  Block paragraph component
  * --------------------------------------------------*/
+.entity-paragraphs-item.paragraphs-item-block-paragraph {
+  max-width: none;
+}
 .entity-paragraphs-item.paragraphs-item-block-paragraph .content .field-name-field-title .field-item {
   font-family: 'HelveticaBQMedium';
   font-size: 37px;
@@ -13450,28 +13474,17 @@ body .main-container .container-fluid .row section ul.action-links li a {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 14px;
 }
-body footer.footer {
+/*
+ *  Content section (main content)
+ * --------------------------------------------------*/
+footer.footer,
+footer.container,
+footer.container-fluid {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   margin: 0;
-  padding: 10px 30px 50px;
   height: 180px;
   border: none;
-}
-/*
- *  Content section (main content)
- * --------------------------------------------------*/
-footer.container,
-footer.container-fluid {
-  margin-top: 150px;
-  padding-bottom: 50px;
-  border: none;
-}
-@media screen and (min-width: 64em) {
-  footer.container,
-  footer.container-fluid {
-    padding-left: 35px;
-  }
 }

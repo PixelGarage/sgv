@@ -12,23 +12,23 @@
 
 // Component
 // -------------------------
-.entity-paragraphs-item.paragraphs-item-text-paragraph {
+.entity-paragraphs-item {
   max-width: @paragraph-max-width;
   margin: 0 auto @paragraph-margin-bottom;
 
   .content {
-    .field-name-field-title {
-      .field-item {
-        .paragraph-subtitle();
-      }
-    }
-
     .field-name-field-text {
-      .field-item {
-        #pxl-mixins.wysiwyg-body(16px);
-
-        @media @tablet {
-          padding-right: 230px;
+      .field-items {
+        .field-item {
+          p {
+            img {
+              display: block;
+              float: none;
+              margin-left: 0;
+              //max-width: 250px;
+              //height: auto;
+            }
+          }
         }
       }
     }

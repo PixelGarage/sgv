@@ -25,8 +25,13 @@
     .col-sm-4, .col-sm-8, .col-sm-12 {
       font-family: @pxl-text-font;
       color: @pxl-text-inverted;
-      padding-left: 7.5px;
-      padding-right: 7.5px;
+      padding-left: 0;
+      padding-right: 0;
+
+      @media @tablet {
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+      }
 
       a {
         color: @pxl-text-inverted;
@@ -164,10 +169,6 @@
         }
       }
     }
-
-    .col-sm-4 {
-      padding-left: 7.5px;
-    }
   }
 }
 
@@ -175,7 +176,7 @@
 body.page-user {
   .main-container {
     .container-fluid {
-      padding: 40px 10px 60px;
+      //padding: 40px 15px 60px;
       max-width: @container-desktop;
       .row {
         margin: 0 -@grid-gutter-width/2;
