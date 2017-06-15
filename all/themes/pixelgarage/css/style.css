@@ -9190,7 +9190,7 @@ table.template-course tbody tr td:last-child {
 @media screen and (min-width: 64em) {
   .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body a:hover,
   .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body a:focus {
-    color: green;
+    color: #e1001a;
   }
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body pre,
@@ -9399,7 +9399,7 @@ table.template-course tbody tr td:last-child {
 @media screen and (min-width: 64em) {
   .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body a:hover,
   .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body a:focus {
-    color: green;
+    color: #e1001a;
   }
 }
 .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body pre,
@@ -9646,7 +9646,7 @@ table.template-course tbody tr td:last-child {
   .node.node-webform .row .col-sm-6 .field-name-body a:hover,
   .node.node-webform .row .col-sm-12 .field-name-body a:focus,
   .node.node-webform .row .col-sm-6 .field-name-body a:focus {
-    color: green;
+    color: #e1001a;
   }
 }
 .node.node-webform .row .col-sm-12 .field-name-body pre,
@@ -9854,7 +9854,7 @@ table.template-course tbody tr td:last-child {
 @media screen and (min-width: 64em) {
   .node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body a:hover,
   .node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body a:focus {
-    color: green;
+    color: #e1001a;
   }
 }
 .node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
@@ -10478,7 +10478,7 @@ form#user-login .form-control:focus,
   .user-profile .row .col-sm-4 .field-name-field-short-description .field-item a:focus,
   .user-profile .row .col-sm-8 .field-name-field-short-description .field-item a:focus,
   .user-profile .row .col-sm-12 .field-name-field-short-description .field-item a:focus {
-    color: green;
+    color: #e1001a;
   }
 }
 .user-profile .row .col-sm-4 .field-name-field-short-description .field-item pre,
@@ -11198,7 +11198,7 @@ form#user-profile-form div .form-actions .form-submit .icon {
 @media screen and (min-width: 64em) {
   .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item a:hover,
   .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item a:focus {
-    color: green;
+    color: #e1001a;
   }
 }
 .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item pre,
@@ -11410,7 +11410,7 @@ form#user-profile-form div .form-actions .form-submit .icon {
   .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text-right-column .field-item a:hover,
   .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text .field-item a:focus,
   .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text-right-column .field-item a:focus {
-    color: green;
+    color: #e1001a;
   }
 }
 .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text .field-item pre,
