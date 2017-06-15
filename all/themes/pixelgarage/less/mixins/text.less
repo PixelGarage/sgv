@@ -96,12 +96,17 @@
       font-family: @pxl-text-font;
       .font-size-responsive(@text-size, @resp-font-size-min);
       color: @link-color;
+      //#pxl-mixins.transition(color 100ms ease-in-out);
 
       &:hover, &:focus {
-        color: @link-hover-color;
         text-decoration: none;
         background: none;
+
+        @media @normal {
+          color: @link-hover-color;
       }
+      }
+
     }
 
     pre, address {

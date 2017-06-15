@@ -123,21 +123,30 @@ header#navbar {
             a {
               padding: 10px 0;
               font-family: @pxl-text-font-bold;
-              font-size: 23px;
+              font-size: 16px;
               text-decoration: none;
               letter-spacing: 0.04em;
-              line-height: 1;
+              line-height: 1.5;
               color: @text-color;
               background: none;
               outline: none;
 
-              &:hover,
               &.active {
                 color: @pxl-color-red;
               }
 
               @media @normal {
                 padding: 10px @grid-gutter-width/2;
+                line-height: 1;
+                #pxl-mixins.transition(color 100ms ease-in-out);
+
+                &:hover {
+                  color: @gray-light;
+                }
+                &.active {
+                  color: @pxl-color-red;
+                }
+
               }
             }
           }

@@ -124,10 +124,11 @@ body {
 
             @media @normal {
               line-height: 1;
+              #pxl-mixins.transition(color 100ms ease-in-out);
             }
 
             &:hover {
-              color: @pxl-color-red;
+              color: @gray-light;
             }
             &.active {
               color: @pxl-color-red;
@@ -244,25 +245,5 @@ body {
         }
       }
     }
-
-    //
-    // fading area on top and bottom of main container
-    //.fading {
-    //  display: none; // will be enabled via event
-    //  position: absolute;
-    //  left: 0;
-    //  right: 0;
-    //  height: @pxl-content-fading-height;
-    //  z-index: 10;
-    //
-    //  &.fading-top {
-    //    top: 0;
-    //    #gradient.vertical(#fff, rgba(255,255,255,0));
-    //  }
-    //  &.fading-bottom {
-    //    bottom: 0;
-    //    #gradient.vertical(rgba(255,255,255,0), #fff);
-    //  }
-    //}
   } // main-container
 }
