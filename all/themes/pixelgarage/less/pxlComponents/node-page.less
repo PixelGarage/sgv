@@ -72,11 +72,9 @@
             // see paragraph-item-... less files
         }
       }
-
     }
   }
 }
-
 
 .node.node-page.view-mode-teaser {
   // list of pages in front page
@@ -86,7 +84,11 @@
   #pxl-mixins.transition(opacity 300ms ease-in-out);
 
   &:hover {
-    opacity: 0.6;
+    color: @text-color;
+    @media @normal {
+      opacity: 0.6;
+    }
+
   }
 
   >.row {
