@@ -3307,10 +3307,21 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-lg,
 .btn-group-lg > .btn,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body a.btn,
+.node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body a.btn,
+.node.node-webform .row .col-sm-12 .field-name-body a.btn,
+.node.node-webform .row .col-sm-6 .field-name-body a.btn,
+.node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body a.btn,
 #user-create-account .login-register,
 #user_login_form .form-actions-wrapper .form-actions .btn,
 #user-register-form .form-actions .btn,
-#user-pass .form-actions .btn {
+#user-pass .form-actions .btn,
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item a.btn,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item a.btn,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item a.btn,
+.entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item a.btn,
+.entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text .field-item a.btn,
+.entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text-right-column .field-item a.btn {
   padding: 10px 16px;
   font-size: 20px;
   line-height: 1.3333333;
@@ -8937,11 +8948,11 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
  *  Language block component
  * --------------------------------------------------*/
 #block-user-login {
-  margin-top: 80px;
+  margin-bottom: 80px;
 }
 @media screen and (min-width: 64em) {
   #block-user-login {
-    margin-top: 100px;
+    margin-bottom: 100px;
   }
 }
 /*
@@ -9193,6 +9204,34 @@ table.template-course tbody tr td:last-child {
     color: #e1001a;
   }
 }
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body a.btn {
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: white;
+  background: #333333;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  -webkit-transition: opacity 100ms ease-in-out;
+  -o-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
+}
+@media screen and (min-width: 45em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body a.btn {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body a.btn {
+    font-size: 16px;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body a.btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.6;
+}
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body pre,
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body address {
   font-family: 'HelveticaBQMedium';
@@ -9401,6 +9440,34 @@ table.template-course tbody tr td:last-child {
   .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body a:focus {
     color: #e1001a;
   }
+}
+.node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body a.btn {
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: white;
+  background: #333333;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  -webkit-transition: opacity 100ms ease-in-out;
+  -o-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
+}
+@media screen and (min-width: 45em) {
+  .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body a.btn {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body a.btn {
+    font-size: 16px;
+  }
+}
+.node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body a.btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.6;
 }
 .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body pre,
 .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body address {
@@ -9649,6 +9716,38 @@ table.template-course tbody tr td:last-child {
     color: #e1001a;
   }
 }
+.node.node-webform .row .col-sm-12 .field-name-body a.btn,
+.node.node-webform .row .col-sm-6 .field-name-body a.btn {
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: white;
+  background: #333333;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  -webkit-transition: opacity 100ms ease-in-out;
+  -o-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
+}
+@media screen and (min-width: 45em) {
+  .node.node-webform .row .col-sm-12 .field-name-body a.btn,
+  .node.node-webform .row .col-sm-6 .field-name-body a.btn {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-webform .row .col-sm-12 .field-name-body a.btn,
+  .node.node-webform .row .col-sm-6 .field-name-body a.btn {
+    font-size: 16px;
+  }
+}
+.node.node-webform .row .col-sm-12 .field-name-body a.btn:hover,
+.node.node-webform .row .col-sm-6 .field-name-body a.btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.6;
+}
 .node.node-webform .row .col-sm-12 .field-name-body pre,
 .node.node-webform .row .col-sm-6 .field-name-body pre,
 .node.node-webform .row .col-sm-12 .field-name-body address,
@@ -9856,6 +9955,34 @@ table.template-course tbody tr td:last-child {
   .node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body a:focus {
     color: #e1001a;
   }
+}
+.node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body a.btn {
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: white;
+  background: #333333;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  -webkit-transition: opacity 100ms ease-in-out;
+  -o-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
+}
+@media screen and (min-width: 45em) {
+  .node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body a.btn {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body a.btn {
+    font-size: 16px;
+  }
+}
+.node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body a.btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.6;
 }
 .node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
 .node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body address {
@@ -10480,6 +10607,42 @@ form#user-login .form-control:focus,
   .user-profile .row .col-sm-12 .field-name-field-short-description .field-item a:focus {
     color: #e1001a;
   }
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item a.btn,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item a.btn,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item a.btn {
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: white;
+  background: #333333;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  -webkit-transition: opacity 100ms ease-in-out;
+  -o-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
+}
+@media screen and (min-width: 45em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item a.btn,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item a.btn,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item a.btn {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .user-profile .row .col-sm-4 .field-name-field-short-description .field-item a.btn,
+  .user-profile .row .col-sm-8 .field-name-field-short-description .field-item a.btn,
+  .user-profile .row .col-sm-12 .field-name-field-short-description .field-item a.btn {
+    font-size: 16px;
+  }
+}
+.user-profile .row .col-sm-4 .field-name-field-short-description .field-item a.btn:hover,
+.user-profile .row .col-sm-8 .field-name-field-short-description .field-item a.btn:hover,
+.user-profile .row .col-sm-12 .field-name-field-short-description .field-item a.btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.6;
 }
 .user-profile .row .col-sm-4 .field-name-field-short-description .field-item pre,
 .user-profile .row .col-sm-8 .field-name-field-short-description .field-item pre,
@@ -11201,6 +11364,34 @@ form#user-profile-form div .form-actions .form-submit .icon {
     color: #e1001a;
   }
 }
+.entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item a.btn {
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: white;
+  background: #333333;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  -webkit-transition: opacity 100ms ease-in-out;
+  -o-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
+}
+@media screen and (min-width: 45em) {
+  .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item a.btn {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item a.btn {
+    font-size: 16px;
+  }
+}
+.entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item a.btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.6;
+}
 .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item pre,
 .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item address {
   font-family: 'HelveticaBQMedium';
@@ -11412,6 +11603,38 @@ form#user-profile-form div .form-actions .form-submit .icon {
   .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text-right-column .field-item a:focus {
     color: #e1001a;
   }
+}
+.entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text .field-item a.btn,
+.entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text-right-column .field-item a.btn {
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: white;
+  background: #333333;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  -webkit-transition: opacity 100ms ease-in-out;
+  -o-transition: opacity 100ms ease-in-out;
+  transition: opacity 100ms ease-in-out;
+}
+@media screen and (min-width: 45em) {
+  .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text .field-item a.btn,
+  .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text-right-column .field-item a.btn {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text .field-item a.btn,
+  .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text-right-column .field-item a.btn {
+    font-size: 16px;
+  }
+}
+.entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text .field-item a.btn:hover,
+.entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text-right-column .field-item a.btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.6;
 }
 .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text .field-item pre,
 .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text-right-column .field-item pre,
