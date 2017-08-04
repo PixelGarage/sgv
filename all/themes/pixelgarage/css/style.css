@@ -8948,11 +8948,12 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
  *  Language block component
  * --------------------------------------------------*/
 #block-user-login {
+  margin-top: 60px;
   margin-bottom: 80px;
 }
 @media screen and (min-width: 64em) {
   #block-user-login {
-    margin-bottom: 100px;
+    margin-bottom: 140px;
   }
 }
 /*
@@ -9205,6 +9206,7 @@ table.template-course tbody tr td:last-child {
   }
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body a.btn {
+  padding: 13px 16px 10px;
   border: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -9216,6 +9218,7 @@ table.template-course tbody tr td:last-child {
   -webkit-transition: opacity 100ms ease-in-out;
   -o-transition: opacity 100ms ease-in-out;
   transition: opacity 100ms ease-in-out;
+  margin-top: 10px;
 }
 @media screen and (min-width: 45em) {
   .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body a.btn {
@@ -9442,6 +9445,7 @@ table.template-course tbody tr td:last-child {
   }
 }
 .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body a.btn {
+  padding: 13px 16px 10px;
   border: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -9453,6 +9457,7 @@ table.template-course tbody tr td:last-child {
   -webkit-transition: opacity 100ms ease-in-out;
   -o-transition: opacity 100ms ease-in-out;
   transition: opacity 100ms ease-in-out;
+  margin-top: 10px;
 }
 @media screen and (min-width: 45em) {
   .node.node-page.view-mode-teaser > .row > div.col-sm-12 > .field-name-body a.btn {
@@ -9718,6 +9723,7 @@ table.template-course tbody tr td:last-child {
 }
 .node.node-webform .row .col-sm-12 .field-name-body a.btn,
 .node.node-webform .row .col-sm-6 .field-name-body a.btn {
+  padding: 13px 16px 10px;
   border: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -9729,6 +9735,7 @@ table.template-course tbody tr td:last-child {
   -webkit-transition: opacity 100ms ease-in-out;
   -o-transition: opacity 100ms ease-in-out;
   transition: opacity 100ms ease-in-out;
+  margin-top: 10px;
 }
 @media screen and (min-width: 45em) {
   .node.node-webform .row .col-sm-12 .field-name-body a.btn,
@@ -9957,6 +9964,7 @@ table.template-course tbody tr td:last-child {
   }
 }
 .node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body a.btn {
+  padding: 13px 16px 10px;
   border: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -9968,6 +9976,7 @@ table.template-course tbody tr td:last-child {
   -webkit-transition: opacity 100ms ease-in-out;
   -o-transition: opacity 100ms ease-in-out;
   transition: opacity 100ms ease-in-out;
+  margin-top: 10px;
 }
 @media screen and (min-width: 45em) {
   .node.node-article.view-mode-teaser .row div.col-sm-12 .field-name-body a.btn {
@@ -10139,6 +10148,7 @@ form#user-login .form-control:focus,
   padding: 1em 0 0;
 }
 #user-create-account .login-register {
+  padding: 13px 16px 10px;
   border: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -10200,6 +10210,7 @@ form#user-login .form-control:focus,
   margin: 0;
 }
 #user_login_form .form-actions-wrapper .form-actions .btn {
+  padding: 13px 16px 10px;
   border: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -10275,6 +10286,7 @@ form#user-login .form-control:focus,
 }
 #user-register-form .form-actions .btn,
 #user-pass .form-actions .btn {
+  padding: 13px 16px 10px;
   border: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -10611,6 +10623,7 @@ form#user-login .form-control:focus,
 .user-profile .row .col-sm-4 .field-name-field-short-description .field-item a.btn,
 .user-profile .row .col-sm-8 .field-name-field-short-description .field-item a.btn,
 .user-profile .row .col-sm-12 .field-name-field-short-description .field-item a.btn {
+  padding: 13px 16px 10px;
   border: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -10622,6 +10635,7 @@ form#user-login .form-control:focus,
   -webkit-transition: opacity 100ms ease-in-out;
   -o-transition: opacity 100ms ease-in-out;
   transition: opacity 100ms ease-in-out;
+  margin-top: 10px;
 }
 @media screen and (min-width: 45em) {
   .user-profile .row .col-sm-4 .field-name-field-short-description .field-item a.btn,
@@ -11365,6 +11379,7 @@ form#user-profile-form div .form-actions .form-submit .icon {
   }
 }
 .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item a.btn {
+  padding: 13px 16px 10px;
   border: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -11376,6 +11391,7 @@ form#user-profile-form div .form-actions .form-submit .icon {
   -webkit-transition: opacity 100ms ease-in-out;
   -o-transition: opacity 100ms ease-in-out;
   transition: opacity 100ms ease-in-out;
+  margin-top: 10px;
 }
 @media screen and (min-width: 45em) {
   .entity-paragraphs-item.paragraphs-item-text-paragraph .content .field-name-field-text .field-item a.btn {
@@ -11606,6 +11622,7 @@ form#user-profile-form div .form-actions .form-submit .icon {
 }
 .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text .field-item a.btn,
 .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text-right-column .field-item a.btn {
+  padding: 13px 16px 10px;
   border: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -11617,6 +11634,7 @@ form#user-profile-form div .form-actions .form-submit .icon {
   -webkit-transition: opacity 100ms ease-in-out;
   -o-transition: opacity 100ms ease-in-out;
   transition: opacity 100ms ease-in-out;
+  margin-top: 10px;
 }
 @media screen and (min-width: 45em) {
   .entity-paragraphs-item.paragraphs-item-2-column-text-paragraph .row .col-sm-6 .field-name-field-text .field-item a.btn,
@@ -12208,7 +12226,7 @@ form#user-profile-form div .form-actions .form-submit .icon {
  *  View members component
  * --------------------------------------------------*/
 .view.view-members {
-  margin-bottom: 100px;
+  margin-bottom: 15px;
 }
 .view.view-members .view-filters {
   max-width: 960px;
@@ -12520,6 +12538,9 @@ form#user-profile-form div .form-actions .form-submit .icon {
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:hover .document-ext,
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row:focus .document-ext {
   color: #e1001a;
+}
+.view.view-documents .view-content .view-grouping:first-child .view-grouping-header {
+  margin-top: 0;
 }
 /*
  *  View news component
@@ -13688,8 +13709,8 @@ body .main-container .menu-anchor-container ul.menu-anchor li.leaf a.active {
   color: #e1001a;
 }
 body .main-container .menu-anchor-container ul.menu-anchor li.leaf.sub-leaf:before {
-  padding-right: 5px;
-  content: '—';
+  padding-right: 20px;
+  content: '';
 }
 body .main-container .container #page-header .region-header h2.block-title,
 body .main-container .container-fluid #page-header .region-header h2.block-title {
