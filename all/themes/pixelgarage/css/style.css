@@ -8887,7 +8887,13 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
  *  Language block component
  * --------------------------------------------------*/
 #block-locale-language {
+  float: right;
   display: inline-block;
+}
+@media screen and (min-width: 64em) {
+  #block-locale-language {
+    float: none;
+  }
 }
 #block-locale-language ul.language-switcher-locale-url {
   list-style: none;
@@ -8910,7 +8916,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 }
 #block-locale-language ul.language-switcher-locale-url > li a.language-link {
   display: block;
-  padding: 10px 30px 10px 0;
+  padding: 0 10px 10px;
   font-family: 'HelveticaBQMedium';
   font-size: 16px;
   letter-spacing: 0.04em;
@@ -8938,7 +8944,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 }
 @media screen and (min-width: 64em) {
   #block-locale-language ul.language-switcher-locale-url > li a.language-link {
-    padding: 0 15px;
+    padding: 0 10px;
   }
   #block-locale-language ul.language-switcher-locale-url > li.last a.language-link {
     padding-right: 0;
@@ -9300,6 +9306,11 @@ table.template-course tbody tr td:last-child {
   -webkit-transition: opacity 300ms ease-in-out;
   -o-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-teaser {
+    margin: 30px 0 40px;
+  }
 }
 .node.node-page.view-mode-teaser:hover {
   color: #333333;
@@ -13480,8 +13491,15 @@ header#navbar .container-fluid .navbar-header .navbar-toggle:hover .icon-bar {
 }
 header#navbar .container .navbar-collapse,
 header#navbar .container-fluid .navbar-collapse {
+  padding-bottom: 15px;
   position: relative;
   border: none;
+}
+@media screen and (min-width: 64em) {
+  header#navbar .container .navbar-collapse,
+  header#navbar .container-fluid .navbar-collapse {
+    padding-bottom: 0px;
+  }
 }
 header#navbar .container .navbar-collapse.in,
 header#navbar .container-fluid .navbar-collapse.in {
@@ -13802,4 +13820,11 @@ footer.container-fluid {
   margin: 0;
   height: 180px;
   border: none;
+}
+footer.footer .region-footer .node.node-footer,
+footer.container .region-footer .node.node-footer,
+footer.container-fluid .region-footer .node.node-footer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1630px;
 }

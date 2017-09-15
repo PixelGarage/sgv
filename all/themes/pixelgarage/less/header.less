@@ -102,8 +102,13 @@ header#navbar {
 
     // collapse part
     .navbar-collapse {
+      padding-bottom: 15px;
       position: relative;
       border: none;
+
+      @media @collapse-break {
+        padding-bottom: 0px;
+      }
 
       &.in {
         #pxl-mixins.box-shadow(0 8px 6px -6px rgba(0, 0, 0, 0.15));
