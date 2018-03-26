@@ -1,0 +1,45 @@
+/*
+ *  Buttons component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+// Button Style
+// -------------------------
+.btn {
+  .resp-submit-button();
+
+  &.btn-default {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 13px 16px 10px;
+    font-family: @pxl-text-font;
+    #pxl-mixins.font-size-responsive(19px, 14px);
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: none;
+    border: none;
+    background: @text-color;
+    color: white;
+
+    //&:before {
+    //  display: inline-block;
+    //  vertical-align: middle;
+    //  padding-right: 10px;
+    //  font-family: @pxl-icon-font;
+    //  font-size: 30px;
+    //}
+
+    &:hover, &:focus {
+      opacity: 0.6;
+      background-color: @text-color;
+      color: @pxl-color-active;
+    }
+  }
+}
