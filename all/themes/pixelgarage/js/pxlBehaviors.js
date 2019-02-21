@@ -28,7 +28,7 @@
    */
    Drupal.behaviors.fullSizeClickableItems = {
     attach: function () {
-      var $clickableItems = $('.view-pages  .views-row').add('.view-documents .views-row');
+      var $clickableItems = $('.view-pages  .views-row').add('.view-documents .views-row').add('.view-view-news .views-field');
 
       $clickableItems.once('click', function () {
         $(this).on('click', function () {

@@ -13,42 +13,90 @@
 
 // General settings
 // -------------------------
-.node.node-article.view-mode-teaser {
-  .row {
-    div.col-sm-12 {
-      width: 100%;
-      opacity: 1.0;
-      #pxl-mixins.transition(opacity 300ms ease);
+// Node News Page
+.page-node.node-type-article {
+  .region-content {
+    padding-bottom: 50px;
+  }
+  .wrapper {
+    max-width: @paragraph-max-width;
+    margin: 0 auto;
+  }
+  .field-name-field-image {
+    .carousel {
+      #pxl-mixins.carousel();
+    }
+  }
+  .field-name-title {
+    .paragraph-subtitle();
+    margin: 40px 0 10px;
+  }
+  .field-name-body {
+    #pxl-mixins.wysiwyg-body(16px);
 
-      &:hover {
-        color: @text-color;
+    @media @normal {
+      max-width: 70%;
+    }
+  }
+}
 
-        @media @normal {
-          opacity: 0.6;
-        }
-
-      }
+// Node News Teaser
+.view-mode-teaser {
+      //width: 100%;
+      margin-bottom: 75px;
 
       .field-name-title {
+        opacity: 1.0;
+        //#pxl-mixins.transition(opacity 300ms ease);
         h2 {
           .paragraph-item-title();
+          a {
+            &:hover {
+              color: @text-color;
+            }
+          }
         }
       }
 
       .field-name-body {
         #pxl-mixins.wysiwyg-body(16px);
+        opacity: 1.0;
+        //#pxl-mixins.transition(opacity 300ms ease);
       }
 
       .field-name-field-image {
-        .field-item {
-          img {
-            display: block;
-            width: 100%;
-            height: auto;
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+
+          @media @normal {
+            -webkit-filter: none; /* Safari 6.0 - 9.0 */
+            filter: none;
           }
         }
       }
 
-    }
+      /// HOVER STYLES for normal///
+      @media @normal {
+
+        &:hover {
+          cursor: pointer;
+          //color: @pxl-color-main;
+
+          .field-name-field-image {
+            img {
+              -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
+            }
+          }
+          .field-name-title {
+            //color: @pxl-color-main;
+            opacity: 0.6;
+          }
+          .field-name-body {
+            opacity: 0.6;
+          }
+        }
+      }
   }
-}

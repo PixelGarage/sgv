@@ -12,8 +12,6 @@
 // Mixins
 // -------------------------
 
-
-
 // Main settings
 // -------------------------
 .container, .container-fluid {
@@ -59,11 +57,13 @@ html {
 
   // Text Selection Style
   ::selection {
-    background-color: lighten(@pxl-color-red, 30%);
+    background-color: @pxl-color-red;
+    color: white;
   }
   /* Firefox */
   ::-moz-selection {
-    background-color: lighten(@pxl-color-red, 30%);
+    background-color: @pxl-color-red;
+    color: white;
   }
 
 }

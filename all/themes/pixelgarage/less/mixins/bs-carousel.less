@@ -12,6 +12,8 @@
 @carousel-control-shadow-left: 2px 0 2px rgba(100,100,100, 0.4);
 @carousel-control-shadow-right: -2px 0 2px rgba(100,100,100, 0.4);
 
+@carousel-control-alpha: 0;
+
 // Mixins
 // -------------------------
 #pxl-mixins {
@@ -21,27 +23,49 @@
     position: relative;
     margin: 0;
     padding: 0;
-    height: auto;
+    //height: auto;
+    @media @normal {
+      padding: 0 40px;
+    }
 
     // fading carousel
     &.carousel-fade {
       > .carousel-inner {
         .item {
+          width: 100%;
+          height: 50vh;
+          background: white none;
+          transition-property: opacity;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            //background: top center no-repeat;
+            object-position: 50% 50%;
+          }
+          @media @normal {
+            height: 66vh;
+          }
+        }
+
+        .item,
+        .active.left,
+        .active.right {
           opacity: 0;
-          #pxl-mixins.transition(opacity 1.5s);
+        }
 
-          &.active {
-            opacity: 1.0;
+        .active,
+        .next.left,
+        .prev.right {
+          opacity: 1;
+        }
 
-            &.left, &.right {
-              left: 0;
-              opacity: 0;
-              z-index: 1;
-            }
-          }
-          &.left.next, &.right.prev {
-            opacity: 1.0;
-          }
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+          left: 0;
+          transform: translate3d(0, 0, 0);
         }
       }
     }
@@ -50,9 +74,7 @@
       margin-top: 0;
 
       .item {
-
         &.active {
-
         }
       }
     }
@@ -82,8 +104,8 @@
     > a.carousel-control {
       display: block;
       position: absolute;
-      top: 0;
-      bottom: 0;
+      top: 10%;
+      bottom: 10%;
       padding: 0;
       width: 50%;
       #pxl-mixins.font-size-responsive(80px, 50px);
@@ -93,6 +115,8 @@
       #pxl-mixins.border-radius(0);
       border: none;
       background: none;
+      opacity: 1;
+      #pxl-mixins.transition(all 0.5s);
 
       &.left {
         left: 0;
@@ -102,7 +126,19 @@
         .fa {
           display: inline-block;
           #pxl-mixins.center-vertically(absolute);
-          left: 5%;
+          margin: 0;
+          padding: 20px 30px 20px 0px;
+          left: 0;
+          //background-color: rgba(26,26,26,@carousel-control-alpha);
+          //#pxl-mixins.transition(all 0.3s);
+
+          &:before {
+            display: block;
+            width: 24px;
+            height: 40px;
+            content: '';
+            background: center center no-repeat url(../images/carousel-fa-left.svg);
+          }
         }
       }
 
@@ -114,12 +150,22 @@
         .fa {
           display: inline-block;
           #pxl-mixins.center-vertically(absolute);
-          right: 5%;
+          margin: 0;
+          padding: 20px 0px 20px 30px;
+          right: 0;
+          //background-color: rgba(26,26,26,@carousel-control-alpha);
+
+          &:before {
+            display: block;
+            width: 24px;
+            height: 40px;
+            content: '';
+            background: center center no-repeat url(../images/carousel-fa-right.svg);
+          }
         }
       }
     }
   }
-
 }
 
 
