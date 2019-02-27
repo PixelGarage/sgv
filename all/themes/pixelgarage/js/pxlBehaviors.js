@@ -55,7 +55,7 @@
     attach: function () {
       // add anchor menu container
       var $mainContainer = $('.main-container'),
-        $paragraphItems = $('#block-system-main').find('.entity-paragraphs-item'),
+        $paragraphItems = $('.node-page').find('.entity-paragraphs-item'),
         $documentItems = $('#block-views-documents-block').find('.view-grouping'),
         paragraphItemsTop = new Array(),
         $activeAnchorMenuItem = null;
@@ -128,8 +128,8 @@
             }
             else {
               // animate menu to position
-              $anchorMenuCont.css({'position': 'absolute'});
-              $anchorMenuCont.animate({'top': scrollPos+20}, {duration:300, queue:false, easing:'swing'});
+              $anchorMenuCont.css({'position': 'fixed'});
+              //$anchorMenuCont.animate({'top': scrollPos+20}, {duration:300, queue:false, easing:'swing'});
             }
 
             //
@@ -171,7 +171,7 @@
           // menu item references anchor, get anchor target
           var $target = $(this.href.slice(anchorPos));
           if ($target.length) {
-            $('html, body').stop().animate({scrollTop: $target.offset().top - mainTop}, 800, 'swing');
+            $('html, body').stop().animate({scrollTop: $target.offset().top - mainTop}, 800, 'linear');
             return false;
           }
           // no target available, perform click
@@ -180,6 +180,7 @@
       });
     }
   };
+
 
   /**
    * Swaps images from black/white to colored on mouse hover.
