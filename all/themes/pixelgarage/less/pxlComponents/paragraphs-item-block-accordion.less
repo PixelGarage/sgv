@@ -1,0 +1,75 @@
+/*
+ *  Block accordion paragraph component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+// Component
+// -------------------------
+.entity-paragraphs-item.paragraphs-item-block-accordion {
+
+  .field-name-field-title {
+    .field-item {
+      .paragraph-subtitle();
+      max-width: @paragraph-max-width;
+    }
+  }
+
+  .field-name-field-text {
+    .field-item {
+      #pxl-mixins.wysiwyg-body(16px);
+
+      @media @tablet {
+        padding-right: 230px;
+      }
+    }
+  }
+
+  .panel-group {
+    margin-top: 0;
+
+    @media @tablet {
+      margin-top: -44px;
+    }
+
+    .panel {
+      border: none;
+      background: transparent none;
+      #pxl-mixins.box-shadow(none);
+
+      .panel-heading {
+        display: inline-block;
+        position: relative;
+        left: 0;
+        padding: 0;
+
+        @media @tablet {
+          left: 240px;
+        }
+
+        .panel-title {
+          a {
+            display: block;
+            .submit-btn();
+          }
+        }
+      }
+
+      .panel-collapse {
+        .panel-body {
+          border: none;
+
+          .field-name-field-block {
+            // see specific content
+          }
+        }
+      }
+    }
+  }
+}
