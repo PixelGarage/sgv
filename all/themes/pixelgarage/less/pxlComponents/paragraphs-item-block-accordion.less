@@ -48,15 +48,22 @@
         position: relative;
         left: 0;
         padding: 0;
-
-        @media @tablet {
-          left: 240px;
-        }
+        background: none;
 
         .panel-title {
+          margin-top: 10px;
+
           a {
             display: block;
             .submit-btn();
+          }
+        }
+
+        @media @tablet {
+          left: 240px;
+
+          .panel-title {
+            margin: 0;
           }
         }
       }

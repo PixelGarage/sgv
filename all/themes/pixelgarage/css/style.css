@@ -12442,11 +12442,10 @@ form#user-profile-form div .form-actions .form-submit .icon {
   position: relative;
   left: 0;
   padding: 0;
+  background: none;
 }
-@media screen and (min-width: 48em) {
-  .entity-paragraphs-item.paragraphs-item-block-accordion .panel-group .panel .panel-heading {
-    left: 240px;
-  }
+.entity-paragraphs-item.paragraphs-item-block-accordion .panel-group .panel .panel-heading .panel-title {
+  margin-top: 10px;
 }
 .entity-paragraphs-item.paragraphs-item-block-accordion .panel-group .panel .panel-heading .panel-title a {
   display: block;
@@ -12477,6 +12476,14 @@ form#user-profile-form div .form-actions .form-submit .icon {
   color: #fff;
   text-decoration: none;
   opacity: 0.6;
+}
+@media screen and (min-width: 48em) {
+  .entity-paragraphs-item.paragraphs-item-block-accordion .panel-group .panel .panel-heading {
+    left: 240px;
+  }
+  .entity-paragraphs-item.paragraphs-item-block-accordion .panel-group .panel .panel-heading .panel-title {
+    margin: 0;
+  }
 }
 .entity-paragraphs-item.paragraphs-item-block-accordion .panel-group .panel .panel-collapse .panel-body {
   border: none;
