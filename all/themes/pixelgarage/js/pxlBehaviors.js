@@ -56,7 +56,7 @@
       // add anchor menu container
       var $mainContainer = $('.main-container'),
         $paragraphItems = $('.node-page').find('.entity-paragraphs-item'),
-        $documentItems = $('#block-views-documents-block').find('.view-grouping'),
+        //$documentItems = $('#block-views-documents-block').find('.view-grouping'),
         paragraphItemsTop = new Array(),
         $activeAnchorMenuItem = null;
 
@@ -92,6 +92,7 @@
             $anchorMenuCont.show();
           }
         });
+        /*
         $documentItems.each(function(index) {
           var $item = $(this),
             anchor = 'document-item-' + index,
@@ -109,7 +110,7 @@
             $anchorMenuCont.show();
           }
         });
-
+        */
         //
         // animate anchor menu, if visible
         if ($anchorMenuCont.is(':visible')) {
