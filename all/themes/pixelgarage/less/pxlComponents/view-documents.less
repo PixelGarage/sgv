@@ -16,12 +16,18 @@
 .view.view-documents {
   max-width: @paragraph-max-width;
   margin: 60px auto 0;
+  padding-left: 25px;
+  border-left: 1px solid @text-color;
+
 
   .view-content {
+    padding-top: 0;
+    padding-bottom: 0;
+
     .view-grouping {
       .view-grouping-header {
-        .paragraph-subtitle();
-        margin: 80px 0 60px;
+        .paragraph-item-title();
+        margin: 60px 0 30px;
       }
 
       .view-grouping-content {
@@ -41,7 +47,8 @@
           .column-title {
             display: block;
             width: 100%;
-            .paragraph-item-title();
+            //.paragraph-item-title();
+            #pxl-mixins.font-size-responsive();
           }
 
           .views-row {

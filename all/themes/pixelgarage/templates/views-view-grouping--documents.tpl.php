@@ -17,7 +17,7 @@
  * - $content: The processed content output that will normally be used.
  */
 switch ($title) {
-  case 'Dokumente für Lehrpersonen und Auszubildende':
+  case 'Dokumente für Lehrpersonen und Lernende':
     $anchor_title = t('Lehrpersonen');
     break;
   case 'Portfolio':

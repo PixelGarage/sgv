@@ -12488,6 +12488,12 @@ form#user-profile-form div .form-actions .form-submit .icon {
 .entity-paragraphs-item.paragraphs-item-block-accordion .panel-group .panel .panel-collapse .panel-body {
   border: none;
 }
+body.page-node-28 #bootstrap-fieldgroup-accordion--accordion .panel-title a[aria-expanded=true] {
+  background-color: #e1001a;
+}
+body.page-node-28 #bootstrap-fieldgroup-accordion--accordion .panel-collapse .panel-body {
+  padding: 0;
+}
 /*
  *  Image paragraph component
  * --------------------------------------------------*/
@@ -13144,25 +13150,32 @@ form#user-profile-form div .form-actions .form-submit .icon {
 .view.view-documents {
   max-width: 960px;
   margin: 60px auto 0;
+  padding-left: 25px;
+  border-left: 1px solid #333333;
+}
+.view.view-documents .view-content {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .view.view-documents .view-content .view-grouping .view-grouping-header {
-  margin: 80px 0 10px;
+  margin: 20px 0 10px;
   padding: 0;
   font-family: 'HelveticaBQMedium';
-  font-size: 28px;
   letter-spacing: 0.02em;
-  line-height: 1.1;
+  text-transform: none;
   color: #333333;
-  margin: 80px 0 60px;
+  line-height: 1.2;
+  font-size: 23px;
+  margin: 60px 0 30px;
 }
-@media screen and (min-width: 29.217391304347824em) {
+@media screen and (min-width: 39.42857142857143em) {
   .view.view-documents .view-content .view-grouping .view-grouping-header {
-    font-size: 5.98958333vw;
+    font-size: 3.64583333vw;
   }
 }
 @media screen and (min-width: 48em) {
   .view.view-documents .view-content .view-grouping .view-grouping-header {
-    font-size: 46px;
+    font-size: 28px;
   }
 }
 .view.view-documents .view-content .view-grouping .view-grouping-content {
@@ -13183,23 +13196,16 @@ form#user-profile-form div .form-actions .form-submit .icon {
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .column-title {
   display: block;
   width: 100%;
-  margin: 20px 0 10px;
-  padding: 0;
-  font-family: 'HelveticaBQMedium';
-  letter-spacing: 0.02em;
-  text-transform: none;
-  color: #333333;
-  line-height: 1.2;
-  font-size: 23px;
+  font-size: 15px;
 }
-@media screen and (min-width: 39.42857142857143em) {
+@media screen and (min-width: 42.35294117647059em) {
   .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .column-title {
-    font-size: 3.64583333vw;
+    font-size: 2.21354167vw;
   }
 }
 @media screen and (min-width: 48em) {
   .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .column-title {
-    font-size: 28px;
+    font-size: 17px;
   }
 }
 .view.view-documents .view-content .view-grouping .view-grouping-content .column-lang .views-row {
@@ -13279,6 +13285,14 @@ form#user-profile-form div .form-actions .form-submit .icon {
 .view.view-view-news {
   max-width: 960px;
   margin: 0 auto;
+}
+.view.view-view-news .field-name-title {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
 }
 .view.view-view-news .view-content {
   padding: 20px 0 0;
