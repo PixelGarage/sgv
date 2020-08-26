@@ -7,17 +7,24 @@
 
 /**
  * Get a rule entry.
+ *
+ * @deprecated in webform_validation:7.x-1.18 and is removed from webform_validation:7.x-2.0. Use webform_validation_rule_load().
+ * @see https://www.drupal.org/project/webform_validation/issues/3104320
  */
 function webform_validation_get_rule($ruleid) {
-  $result = db_query("SELECT ruleid, rulename, nid, validator, data, error_message, negate, weight FROM {webform_validation_rule} WHERE ruleid = :ruleid", array(':ruleid' => $ruleid), array('fetch' => PDO::FETCH_ASSOC));
-  $rule = $result->fetchAssoc();
-  $rule['components'] = webform_validation_get_rule_components($ruleid, $rule['nid']);
-  $rule['negate'] = (bool) $rule['negate'];
-  return $rule;
+  return webform_validation_rule_load($ruleid);
 }
 
 /**
  * Get an array of rules assigned to a webform node.
+ *
+ * @param int $nid
+ *   The node ID.
+ *
+ * @return array
+ *   The rules for a node keyed by their rule ID.
+ *
+ * @see webform_validation_get_node_rules_assoc()
  */
 function webform_validation_get_node_rules($nid) {
   $rules = array();
@@ -28,6 +35,34 @@ function webform_validation_get_node_rules($nid) {
     $rules[$rule['ruleid']] = $rule;
   }
   return $rules;
+}
+
+/**
+ * Get an array of rules assigned to a webform node keyed by their rulename.
+ *
+ * @param int $nid
+ *   The node ID.
+ *
+ * @return array
+ *   The rules for a node keyed by their rulename.
+ *
+ * @see webform_validation_get_node_rules()
+ */
+function webform_validation_get_node_rules_assoc($nid) {
+  $assoc_rules = array();
+  if ($rules = webform_validation_get_node_rules($nid)) {
+    foreach ($rules as $rule) {
+      $components = array();
+      foreach ($rule['components'] as $cid => $component) {
+        $components[$cid] = $cid;
+      }
+      ksort($components);
+      $rule['components'] = $components;
+      $assoc_rules[$rule['rulename']] = $rule;
+    }
+    ksort($assoc_rules);
+  }
+  return $assoc_rules;
 }
 
 /**
@@ -88,6 +123,7 @@ function webform_validation_rule_components_basic($components) {
  *   The ruleid of the rule to delete.
  */
 function webform_dynamic_delete_rule($ruleid) {
+  $transaction = db_transaction();
   // Delete rule.
   db_delete('webform_validation_rule')
     ->condition('ruleid', $ruleid)
